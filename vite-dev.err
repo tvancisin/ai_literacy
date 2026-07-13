@@ -1,0 +1,55 @@
+[2m15:58:08[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled rejection] [1mReferenceError[22m: isLoading is not defined
+[39m > src/App.svelte:95:15
+    93 |          error instanceof Error ? error.message : "Unknown loading error";
+    94 |      } finally {
+    95 |        isLoading = false;
+       |                 ^
+    96 |      }
+    97 |    });
+
+[2m16:11:12[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled error] [1mReferenceError[22m: svgHeight is not defined
+
+	in <unknown>
+	in App.svelte
+	in undefined
+
+[39m > src/App.svelte:110:23
+    108 |            x2={sessionScale(session.id)}
+    109 |            y1={margin.top - 30}
+    110 |            y2={svgHeight - margin.bottom}
+        |                         ^
+    111 |          />
+    112 |          <text x={sessionScale(session.id)} y={38} text-anchor="middle">
+ > Module.untrack node_modules/svelte/src/internal/client/runtime.js:767:9
+ > src/App.svelte?t=1783955472082:211:9
+ > node_modules/svelte/src/internal/client/reactivity/effects.js:391:3
+ > update_reaction node_modules/svelte/src/internal/client/runtime.js:256:15
+ > update_effect node_modules/svelte/src/internal/client/runtime.js:465:17
+ > create_effect node_modules/svelte/src/internal/client/reactivity/effects.js:137:3
+ > node_modules/svelte/src/internal/client/reactivity/effects.js:390:2
+ > flatten node_modules/svelte/src/internal/client/reactivity/async.js:57:2
+ > Module.template_effect node_modules/svelte/src/internal/client/reactivity/effects.js:389:1
+
+[2m16:11:18[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m [31m[Unhandled error] [1mReferenceError[22m: svgHeight is not defined
+
+	in <unknown>
+	in App.svelte
+	in undefined
+
+[39m > src/App.svelte:110:23
+    108 |            x2={sessionScale(session.id)}
+    109 |            y1={margin.top - 30}
+    110 |            y2={svgHeight - margin.bottom}
+        |                         ^
+    111 |          />
+    112 |          <text x={sessionScale(session.id)} y={38} text-anchor="middle">
+ > Module.untrack node_modules/svelte/src/internal/client/runtime.js:767:9
+ > src/App.svelte?t=1783955472082:211:9
+ > node_modules/svelte/src/internal/client/reactivity/effects.js:391:3
+ > update_reaction node_modules/svelte/src/internal/client/runtime.js:256:15
+ > update_effect node_modules/svelte/src/internal/client/runtime.js:465:17
+ > create_effect node_modules/svelte/src/internal/client/reactivity/effects.js:137:3
+ > node_modules/svelte/src/internal/client/reactivity/effects.js:390:2
+ > flatten node_modules/svelte/src/internal/client/reactivity/async.js:57:2
+ > Module.template_effect node_modules/svelte/src/internal/client/reactivity/effects.js:389:1
+

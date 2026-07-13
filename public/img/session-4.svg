@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Session 4 application placeholder</title>
+  <desc id="desc">Workflow board illustration for the application session.</desc>
+  <rect width="320" height="180" fill="#f7f1ec"/>
+  <rect x="34" y="46" width="252" height="94" rx="12" fill="#ffffff" stroke="#dbc9bb" stroke-width="3"/>
+  <circle cx="78" cy="93" r="20" fill="#2f766d"/>
+  <circle cx="160" cy="93" r="20" fill="#6b7fb5"/>
+  <circle cx="242" cy="93" r="20" fill="#d88948"/>
+  <path d="M98 93h42M180 93h42" stroke="#4e5962" stroke-width="8" stroke-linecap="round"/>
+  <path d="M235 90l8 9 18-22" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M69 91h18M78 82v18" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+</svg>

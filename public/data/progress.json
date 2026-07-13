@@ -1,0 +1,150 @@
+{
+  "sessions": [
+    { "id": "session-1", "label": "Session 1", "topic": "Foundations" },
+    { "id": "session-2", "label": "Session 2", "topic": "Prompting" },
+    { "id": "session-3", "label": "Session 3", "topic": "Evaluation" },
+    { "id": "session-4", "label": "Session 4", "topic": "Application" }
+  ],
+  "participants": [
+    {
+      "id": "p01",
+      "name": "Participant 1",
+      "sessions": {
+        "session-1": { "text": "Mapped where AI already appears in weekly work.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Compared prompt versions and kept the clearest structure.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Built a checklist for judging answer quality.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Presented a workflow change with review steps.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p02",
+      "name": "Participant 2",
+      "sessions": {
+        "session-1": { "text": "Documented questions about reliability and privacy.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Tested prompt constraints for shorter responses.", "image": "/img/session-2.svg" },
+        "session-4": { "text": "Shared when not to use AI for a sensitive task.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p03",
+      "name": "Participant 3",
+      "sessions": {
+        "session-1": { "text": "Sketched how generative AI tools produce responses.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Created a reusable prompt template for summaries.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Flagged missing evidence in an AI answer.", "image": "/img/session-3.svg" }
+      }
+    },
+    {
+      "id": "p04",
+      "name": "Participant 4",
+      "sessions": {
+        "session-1": { "text": "Identified AI support in planning and drafting.", "image": "/img/session-1.svg" },
+        "session-3": { "text": "Compared AI output with a trusted reference.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Finished with a low-risk AI usage guide.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p05",
+      "name": "Participant 5",
+      "sessions": {
+        "session-1": { "text": "Listed concerns about bias and over-reliance.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Added role, audience, format, and constraints.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Separated useful material from unsupported claims.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Designed a repeatable review step.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p06",
+      "name": "Participant 6",
+      "sessions": {
+        "session-2": { "text": "Joined through prompt iteration and peer comparison.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Tested outputs against sources and noted uncertainty.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Created an action plan for one recurring workflow.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p07",
+      "name": "Participant 7",
+      "sessions": {
+        "session-1": { "text": "Captured expectations and current AI use.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Added examples and success criteria to a prompt.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Checked whether citations supported the answer.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Shared a reflection on confidence and limits.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p08",
+      "name": "Participant 8",
+      "sessions": {
+        "session-1": { "text": "Grouped AI tasks by risk.", "image": "/img/session-1.svg" },
+        "session-3": { "text": "Scored clarity, usefulness, accuracy, and context.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Turned the rubric into a future checklist.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p09",
+      "name": "Participant 9",
+      "sessions": {
+        "session-1": { "text": "Explored what AI can infer from a short prompt.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Made responses more specific to a learner audience.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Selected the answer with clearer reasoning.", "image": "/img/session-3.svg" }
+      }
+    },
+    {
+      "id": "p10",
+      "name": "Participant 10",
+      "sessions": {
+        "session-1": { "text": "Logged baseline confidence and chose one workflow.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Separated source facts from generated suggestions.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Rewrote unsupported statements as verification questions.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Completed a before-and-after workflow comparison.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p11",
+      "name": "Participant 11",
+      "sessions": {
+        "session-2": { "text": "Matched tone and format to a specific audience.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Added verification notes before using generated text.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Summarised personal boundaries for AI use.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p12",
+      "name": "Participant 12",
+      "sessions": {
+        "session-1": { "text": "Outlined a use case and risks to manage.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Moved from a broad prompt to a focused format.", "image": "/img/session-2.svg" },
+        "session-4": { "text": "Shared a scenario with review points before action.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p13",
+      "name": "Participant 13",
+      "sessions": {
+        "session-1": { "text": "Mapped familiar AI tools in learning contexts.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Built a prompt for comparing options.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Used peer feedback to improve evaluation criteria.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Presented clear human review responsibilities.", "image": "/img/session-4.svg" }
+      }
+    },
+    {
+      "id": "p14",
+      "name": "Participant 14",
+      "sessions": {
+        "session-1": { "text": "Recorded questions about transparency and sources.", "image": "/img/session-1.svg" },
+        "session-3": { "text": "Checked generated claims against class materials.", "image": "/img/session-3.svg" }
+      }
+    },
+    {
+      "id": "p15",
+      "name": "Participant 15",
+      "sessions": {
+        "session-1": { "text": "Named one high-value, low-risk task.", "image": "/img/session-1.svg" },
+        "session-2": { "text": "Added examples of useful and unhelpful responses.", "image": "/img/session-2.svg" },
+        "session-3": { "text": "Created a verification habit for important claims.", "image": "/img/session-3.svg" },
+        "session-4": { "text": "Closed with a guide for asking, verifying, and stopping.", "image": "/img/session-4.svg" }
+      }
+    }
+  ]
+}
