@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { scalePoint } from "d3";
+  import { forceCollide, forceSimulation, forceX, forceY, scalePoint } from "d3";
 
   let isLoading = true;
   let loadError = null;
@@ -8,14 +8,15 @@
   let progress = { sessions: [], participants: [] };
   $: sessions = progress.sessions ?? [];
   $: participants = progress.participants ?? [];
+  const baseUrl = import.meta.env.BASE_URL;
 
   let height = 400;
   let width = 400;
   $: margin = {
     top: 80,
-    right: 50,
-    bottom: 50,
-    left: 120,
+    right: 20,
+    bottom: 20,
+    left: 150,
   };
 
   $: laneStart = margin.left;
@@ -29,26 +30,64 @@
     .range([margin.top, height - margin.bottom])
     .padding(0.35);
 
+  const markerRadius = 6;
+  const collisionRadius = 8;
+
+  function initialOffset(index, count) {
+    if (count === 1) {
+      return { x: 0, y: 0 };
+    }
+
+    const angle = (index * 137.5 * Math.PI) / 180;
+    const distance = 5 + index * 2;
+
+    return {
+      x: Math.cos(angle) * distance,
+      y: Math.sin(angle) * distance,
+    };
+  }
+
+  function layoutLocalBeeswarm(sessionArtifacts) {
+    const nodes = sessionArtifacts.map((artifact, index) => {
+      const offset = initialOffset(index, sessionArtifacts.length);
+
+      return {
+        artifact,
+        x: offset.x,
+        y: offset.y,
+      };
+    });
+
+    forceSimulation(nodes)
+      .force("x", forceX(0).strength(0.1))
+      .force("y", forceY(0).strength(0.85))
+      .force("collide", forceCollide(collisionRadius))
+      .stop()
+      .tick(48);
+
+    return nodes;
+  }
+
   $: artifacts = participants.flatMap((participant) =>
     sessions.flatMap((session) => {
-      const artifact = participant.sessions?.[session.id];
-      const x = sessionScale(session.id);
-      const y = participantScale(participant.id);
+      const sessionArtifacts = participant.sessions?.[session.id] ?? [];
+      const baseX = sessionScale(session.id);
+      const baseY = participantScale(participant.id);
+      const groupId = `${participant.id}-${session.id}`;
 
-      if (!artifact || x == null || y == null) {
+      if (!sessionArtifacts.length || baseX == null || baseY == null) {
         return [];
       }
 
-      return [
-        {
-          id: `${participant.id}-${session.id}`,
+      return layoutLocalBeeswarm(sessionArtifacts).map((node) => ({
+          id: node.artifact.id,
+          groupId,
           participant,
           session,
-          artifact,
-          x,
-          y,
-        },
-      ];
+          artifact: node.artifact,
+          x: baseX + node.x,
+          y: baseY + node.y,
+        }));
     }),
   );
 
@@ -86,9 +125,13 @@
     }
   }
 
+  function assetUrl(path) {
+    return `${baseUrl}${path.replace(/^\//, "")}`;
+  }
+
   onMount(async () => {
     try {
-      const response = await fetch("/data/progress.json");
+      const response = await fetch(assetUrl("data/progress.json"));
 
       if (!response.ok) {
         throw new Error(`Request failed with status ${response.status}`);
@@ -108,6 +151,7 @@
   <svg {width} {height}>
     <rect class="chart-background" {width} {height} />
 
+    <!-- sessions vertical indicators -->
     <g class="session-guides" aria-hidden="true">
       {#each sessions as session}
         <line
@@ -130,18 +174,20 @@
       {/each}
     </g>
 
+    <!-- horizontal participant lines -->
     <g class="participant-lanes">
       {#each participants as participant}
         {@const y = participantScale(participant.id)}
         <g>
-          <text
-            class="participant-label"
-            x={margin.left - 18}
-            {y}
-            text-anchor="end"
-          >
-            {participant.name}
-          </text>
+          <image
+            class="participant-icon"
+            href={assetUrl("img/person.svg")}
+            x={margin.left - 42}
+            y={y - 12}
+            width="24"
+            height="24"
+            aria-label={participant.name}
+          />
           <path class="lane-path" d={`M ${laneStart} ${y} H ${laneEnd}`} />
         </g>
       {/each}
@@ -151,6 +197,8 @@
       {#each artifacts as artifact (artifact.id)}
         <g
           class:active={activeArtifactId === artifact.id}
+          class:sibling={activeArtifact?.groupId === artifact.groupId &&
+            activeArtifactId !== artifact.id}
           class="artifact-marker"
           role="button"
           tabindex="0"
@@ -163,8 +211,8 @@
           onkeydown={(event) => handleMarkerKeydown(event, artifact.id)}
         >
           <title>{artifact.participant.name}, {artifact.session.label}</title>
-          <circle class="marker-ring" r="10" />
-          <circle class="marker-dot" r="4.5" />
+          <circle class="marker-ring" r={markerRadius} />
+          <!-- <circle class="marker-dot" r="4.5" /> -->
         </g>
       {/each}
     </g>
@@ -175,7 +223,7 @@
       class="artifact-panel"
       style={`left: ${panelLeft}px; top: ${panelTop}px; width: ${panelWidth}px;`}
     >
-      <img src={activeArtifact.artifact.image} alt="" />
+      <img src={assetUrl(activeArtifact.artifact.image)} alt="" />
       <div>
         <p class="panel-kicker">
           {activeArtifact.participant.name} / {activeArtifact.session.label}
@@ -234,11 +282,8 @@
     font-weight: 500;
   }
 
-  .participant-label {
-    dominant-baseline: middle;
-    fill: #344047;
-    font-size: 12px;
-    font-weight: 650;
+  .participant-icon {
+    opacity: 0.82;
   }
 
   .lane-path {
@@ -249,12 +294,12 @@
   }
 
   .artifact-marker {
-    color: #2f766d;
+    color: #000000;
     cursor: pointer;
     outline: none;
   }
 
-  .artifact-marker:nth-child(4n + 2) {
+  /* .artifact-marker:nth-child(4n + 2) {
     color: #6b7fb5;
   }
 
@@ -264,27 +309,32 @@
 
   .artifact-marker:nth-child(4n) {
     color: #8b6f2e;
-  }
+  } */
 
   .marker-ring {
     fill: #ffffff;
     stroke: currentColor;
-    stroke-width: 2.5;
+    stroke-width: 1;
     transition:
       r 140ms ease,
       stroke-width 140ms ease;
   }
 
-  .marker-dot {
+  /* .marker-dot {
     fill: currentColor;
     pointer-events: none;
-  }
+  } */
 
   .artifact-marker:hover .marker-ring,
   .artifact-marker:focus .marker-ring,
   .artifact-marker.active .marker-ring {
-    r: 13;
-    stroke-width: 3.5;
+    r: 8.5;
+    stroke-width: 2.75;
+  }
+
+  .artifact-marker.sibling .marker-ring {
+    fill: #f2f4f1;
+    stroke-width: 2.4;
   }
 
   .artifact-panel {
