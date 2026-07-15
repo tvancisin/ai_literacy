@@ -292,7 +292,9 @@
   main {
     width: 100%;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: pan-y;
     background: linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.92),
