@@ -1,6 +1,12 @@
 <script>
   import { onMount } from "svelte";
-  import { forceCollide, forceSimulation, forceX, forceY, scalePoint } from "d3";
+  import {
+    forceCollide,
+    forceSimulation,
+    forceX,
+    forceY,
+    scalePoint,
+  } from "d3";
 
   let isLoading = true;
   let loadError = null;
@@ -14,9 +20,9 @@
   let width = 400;
   $: margin = {
     top: 80,
-    right: 20,
+    right: 50,
     bottom: 20,
-    left: 150,
+    left: 80,
   };
 
   $: laneStart = margin.left;
@@ -80,14 +86,14 @@
       }
 
       return layoutLocalBeeswarm(sessionArtifacts).map((node) => ({
-          id: node.artifact.id,
-          groupId,
-          participant,
-          session,
-          artifact: node.artifact,
-          x: baseX + node.x,
-          y: baseY + node.y,
-        }));
+        id: node.artifact.id,
+        groupId,
+        participant,
+        session,
+        artifact: node.artifact,
+        x: baseX + node.x,
+        y: baseY + node.y,
+      }));
     }),
   );
 
