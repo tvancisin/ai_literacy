@@ -7,6 +7,7 @@
     forceY,
     scalePoint,
   } from "d3";
+  import { scale } from "svelte/transition";
 
   let isLoading = true;
   let loadError = null;
@@ -98,26 +99,53 @@
   );
 
   let activeArtifactId = null;
+  let isPanelExpanded = false;
   $: activeArtifact =
     artifacts.find((artifact) => artifact.id === activeArtifactId) ?? null;
   $: panelWidth = width < 780 ? 244 : 312;
+  $: expandedPanelWidth = Math.max(320, width * 0.5);
+  $: expandedPanelHeight = Math.max(260, height * 0.5);
   $: lastSessionId = sessions[sessions.length - 1]?.id;
   $: isLastSessionArtifact = activeArtifact?.session.id === lastSessionId;
   $: panelLeft = activeArtifact
-    ? isLastSessionArtifact
+    ? isPanelExpanded
+      ? (width - expandedPanelWidth) / 2
+      : isLastSessionArtifact
       ? Math.max(16, activeArtifact.x - panelWidth - 18)
       : Math.min(activeArtifact.x + 18, width - panelWidth - 16)
     : 0;
   $: panelTop = activeArtifact
-    ? Math.max(14, Math.min(activeArtifact.y - 82, height - 252))
+    ? isPanelExpanded
+      ? (height - expandedPanelHeight) / 2
+      : Math.max(14, Math.min(activeArtifact.y - 82, height - 252))
     : 0;
+  $: panelStyle = isPanelExpanded
+    ? `left: ${panelLeft}px; top: ${panelTop}px; width: ${expandedPanelWidth}px; height: ${expandedPanelHeight}px;`
+    : `left: ${panelLeft}px; top: ${panelTop}px; width: ${panelWidth}px;`;
 
   function showArtifact(id) {
     activeArtifactId = id;
+    isPanelExpanded = false;
   }
 
   function hideArtifact() {
     activeArtifactId = null;
+    isPanelExpanded = false;
+  }
+
+  function togglePanelExpanded() {
+    isPanelExpanded = !isPanelExpanded;
+  }
+
+  function handleDocumentClick(event) {
+    if (
+      event.target instanceof Element &&
+      event.target.closest(".artifact-marker, .artifact-panel")
+    ) {
+      return;
+    }
+
+    hideArtifact();
   }
 
   function handleMarkerKeydown(event, id) {
@@ -134,6 +162,14 @@
   function assetUrl(path) {
     return `${baseUrl}${path.replace(/^\//, "")}`;
   }
+
+  onMount(() => {
+    document.addEventListener("click", handleDocumentClick);
+
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  });
 
   onMount(async () => {
     try {
@@ -210,10 +246,10 @@
           tabindex="0"
           aria-label={`${artifact.participant.name}, ${artifact.session.label}: ${artifact.artifact.text}`}
           transform={`translate(${artifact.x} ${artifact.y})`}
-          onmouseenter={() => showArtifact(artifact.id)}
-          onmouseleave={hideArtifact}
-          onfocus={() => showArtifact(artifact.id)}
-          onblur={hideArtifact}
+          onclick={(event) => {
+            event.stopPropagation();
+            showArtifact(artifact.id);
+          }}
           onkeydown={(event) => handleMarkerKeydown(event, artifact.id)}
         >
           <title>{artifact.participant.name}, {artifact.session.label}</title>
@@ -227,8 +263,19 @@
   {#if activeArtifact}
     <aside
       class="artifact-panel"
-      style={`left: ${panelLeft}px; top: ${panelTop}px; width: ${panelWidth}px;`}
+      class:expanded={isPanelExpanded}
+      style={panelStyle}
+      transition:scale={{ duration: 160, start: 0.94, opacity: 0 }}
     >
+      <button
+        class="panel-expand"
+        type="button"
+        aria-label={isPanelExpanded ? "Shrink artifact details" : "Expand artifact details"}
+        aria-pressed={isPanelExpanded}
+        onclick={togglePanelExpanded}
+      >
+        {isPanelExpanded ? "Shrink" : "Expand"}
+      </button>
       <img src={assetUrl(activeArtifact.artifact.image)} alt="" />
       <div>
         <p class="panel-kicker">
@@ -303,6 +350,7 @@
     color: #000000;
     cursor: pointer;
     outline: none;
+    touch-action: manipulation;
   }
 
   /* .artifact-marker:nth-child(4n + 2) {
@@ -318,7 +366,7 @@
   } */
 
   .marker-ring {
-    fill: #ffffff;
+    fill: #dfdfdf;
     stroke: currentColor;
     stroke-width: 1;
     transition:
@@ -349,12 +397,47 @@
     display: grid;
     grid-template-columns: 96px 1fr;
     gap: 12px;
-    padding: 12px;
+    padding: 44px 12px 12px;
     border: 1px solid rgba(38, 50, 56, 0.16);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 16px 44px rgba(38, 50, 56, 0.16);
     color: #263238;
+    transform-origin: center;
+    transition:
+      left 220ms ease,
+      top 220ms ease,
+      width 220ms ease,
+      height 220ms ease,
+      padding 220ms ease,
+      gap 220ms ease,
+      box-shadow 220ms ease;
+  }
+
+  .artifact-panel.expanded {
+    grid-template-columns: minmax(180px, 42%) 1fr;
+    gap: 20px;
+    padding: 56px 24px 24px;
+  }
+
+  .panel-expand {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    min-width: 78px;
+    height: 30px;
+    border: 1px solid rgba(38, 50, 56, 0.18);
+    border-radius: 6px;
+    background: #ffffff;
+    color: #263238;
+    cursor: pointer;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    touch-action: manipulation;
+    transition:
+      background-color 160ms ease,
+      border-color 160ms ease;
   }
 
   .artifact-panel img {
@@ -363,6 +446,14 @@
     border-radius: 6px;
     object-fit: cover;
     background: #eef2f1;
+    transition:
+      width 220ms ease,
+      height 220ms ease;
+  }
+
+  .artifact-panel.expanded img {
+    width: 100%;
+    height: 100%;
   }
 
   .artifact-panel h2,
@@ -374,11 +465,21 @@
     margin-bottom: 5px;
     font-size: 15px;
     line-height: 1.2;
+    transition: font-size 220ms ease;
   }
 
   .artifact-panel p {
     font-size: 12px;
     line-height: 1.45;
+    transition: font-size 220ms ease;
+  }
+
+  .artifact-panel.expanded h2 {
+    font-size: 24px;
+  }
+
+  .artifact-panel.expanded p {
+    font-size: 18px;
   }
 
   .artifact-panel .panel-kicker {
