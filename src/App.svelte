@@ -329,7 +329,7 @@
 <main
   bind:clientWidth={width}
   bind:clientHeight={height}
-  style={`--background-image: url(${assetUrl("img/bg.png")});`}
+  style={`--background-image: url(${assetUrl("img/bg_test.png")});`}
 >
   <img class="efi_logo" src={assetUrl("efi_logo.png")} alt="EFI logo" />
   <img class="grassmarket_logo" src={assetUrl("grassmarket_logo_nobg.png")} alt="GrassMarket logo" />
@@ -454,7 +454,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.2;
+    opacity: 0.3;
     pointer-events: none;
     z-index: 0;
   }
