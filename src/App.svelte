@@ -43,8 +43,8 @@
   $: laneEnd = width - margin.right;
 
   // grouped circle packing
-  const minMarkerRadius = 15;
-  const maxMarkerRadius = 45;
+  const minMarkerRadius = 20;
+  const maxMarkerRadius = 70;
   const collisionPadding = 2;
   const packingStrength = 1;
   const packingIterations = 10;
@@ -326,9 +326,14 @@
   });
 </script>
 
-<main bind:clientWidth={width} bind:clientHeight={height}>
+<main
+  bind:clientWidth={width}
+  bind:clientHeight={height}
+  style={`--background-image: url(${assetUrl("img/bg.png")});`}
+>
   <img class="efi_logo" src={assetUrl("efi_logo.png")} alt="EFI logo" />
-  <img class="grassmarket_logo" src={assetUrl("grassmarket_logo.webp")} alt="GrassMarket logo" />
+  <img class="grassmarket_logo" src={assetUrl("grassmarket_logo_nobg.png")} alt="GrassMarket logo" />
+  <div class="background-image" aria-hidden="true"></div>
   <svg {width} {height}>
     <rect class="chart-background" {width} {height} />
 
@@ -434,11 +439,29 @@
 
 <style>
   main {
+    position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
     overscroll-behavior: none;
     touch-action: pan-y;
+  }
+
+  .background-image {
+    position: absolute;
+    inset: 0;
+    background-image: var(--background-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  svg {
+    position: relative;
+    z-index: 1;
   }
 
   .efi_logo {
@@ -472,11 +495,11 @@
   }
 
   .chart-background {
-    fill: #ffffff;
+    fill: transparent;
   }
 
   .session-guides line {
-    stroke: #d9ddd8;
+    stroke: #666666;
     stroke-dasharray: 4 7;
     stroke-width: 1;
   }
