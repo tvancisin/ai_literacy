@@ -465,7 +465,7 @@
   .visually-hidden {
     font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     position: absolute;
-    top: 5px;
+    top: 20px;
     left: 50%;
     z-index: 3;
     margin: 0;
