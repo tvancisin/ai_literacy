@@ -7,7 +7,6 @@
     forceY,
     scalePoint,
   } from "d3";
-  import { scale } from "svelte/transition";
 
   // url handling
   const baseUrl = import.meta.env.BASE_URL;
@@ -26,10 +25,10 @@
   let height = 400;
   let width = 400;
   $: margin = {
-    top: 80,
+    top: 150,
     right: 50,
     bottom: 40,
-    left: 50,
+    left: 90,
   };
 
   $: sessionScale = scalePoint()
@@ -44,8 +43,8 @@
   $: laneEnd = width - margin.right;
 
   // grouped circle packing
-  const minMarkerRadius = 10;
-  const maxMarkerRadius = 35;
+  const minMarkerRadius = 15;
+  const maxMarkerRadius = 45;
   const collisionPadding = 2;
 
   function stableRadius(id) {
@@ -58,19 +57,46 @@
     return minMarkerRadius + (hash % (maxMarkerRadius - minMarkerRadius + 1));
   }
 
+  function markerTextSize(radius) {
+    return Math.max(7, Math.min(12, radius * 0.42));
+  }
+
+  function activeMarkerRadius(artifact) {
+    if (!artifact.hasText) {
+      return Math.max(artifact.radius * 2.2, 78);
+    }
+
+    const textLength = artifact.text.length;
+
+    return Math.max(
+      artifact.radius * 2.2,
+      Math.min(150, 72 + textLength * 0.45),
+    );
+  }
+
   $: rawArtifacts = participants.flatMap((participant) =>
     sessions.flatMap((session) => {
       const sessionArtifacts = participant.sessions?.[session.id] ?? [];
 
-      return sessionArtifacts.map((artifact, index) => ({
-        id: artifact.id,
-        groupId: session.id,
-        participant,
-        session,
-        artifact,
-        artifactIndex: index,
-        radius: stableRadius(artifact.id),
-      }));
+      return sessionArtifacts.map((artifact, index) => {
+        const radius = stableRadius(artifact.id);
+        const text = artifact.text?.trim() ?? "";
+        const expandedRadius = activeMarkerRadius({ radius, text, hasText: text.length > 0 });
+
+        return {
+          id: artifact.id,
+          participant,
+          session,
+          artifact,
+          artifactIndex: index,
+          radius,
+          text,
+          hasText: text.length > 0,
+          expandedRadius,
+          markerTextSize: markerTextSize(radius),
+          markerScale: radius / expandedRadius,
+        };
+      });
     }),
   );
 
@@ -120,6 +146,10 @@
     rawArtifacts.length && width > 0 && height > 0
       ? layoutSessionColumns(rawArtifacts)
       : [];
+  $: visibleArtifacts = [...artifacts].sort(
+    (a, b) =>
+      Number(a.id === activeArtifactId) - Number(b.id === activeArtifactId),
+  );
 
   $: sessionColumns = sessions
     .map((session) => {
@@ -136,51 +166,22 @@
     })
     .filter((column) => column.x != null);
 
-  // artifact panel
+  // active artifact
   let activeArtifactId = null;
-  let isPanelExpanded = false;
-  $: activeArtifact =
-    artifacts.find((artifact) => artifact.id === activeArtifactId) ?? null;
-  $: panelWidth = width < 780 ? 244 : 312;
-  $: expandedPanelWidth = Math.max(320, width * 0.5);
-  $: expandedPanelHeight = Math.max(260, height * 0.5);
-  $: lastSessionId = sessions[sessions.length - 1]?.id;
-  $: isLastSessionArtifact = activeArtifact?.session.id === lastSessionId;
-  $: panelLeft = activeArtifact
-    ? isPanelExpanded
-      ? (width - expandedPanelWidth) / 2
-      : activeArtifact.x > width / 2
-        ? Math.max(16, activeArtifact.x - panelWidth - 18)
-        : Math.min(activeArtifact.x + 18, width - panelWidth - 16)
-    : 0;
-  $: panelTop = activeArtifact
-    ? isPanelExpanded
-      ? (height - expandedPanelHeight) / 2
-      : Math.max(14, Math.min(activeArtifact.y - 82, height - 252))
-    : 0;
-  $: panelStyle = isPanelExpanded
-    ? `left: ${panelLeft}px; top: ${panelTop}px; width: ${expandedPanelWidth}px; height: ${expandedPanelHeight}px;`
-    : `left: ${panelLeft}px; top: ${panelTop}px; width: ${panelWidth}px;`;
 
-  // interactions 
+  // interactions
   function showArtifact(id) {
     activeArtifactId = id;
-    isPanelExpanded = false;
   }
 
   function hideArtifact() {
     activeArtifactId = null;
-    isPanelExpanded = false;
-  }
-
-  function togglePanelExpanded() {
-    isPanelExpanded = !isPanelExpanded;
   }
 
   function handleDocumentClick(event) {
     if (
       event.target instanceof Element &&
-      event.target.closest(".artifact-marker, .artifact-panel")
+      event.target.closest(".artifact-marker")
     ) {
       return;
     }
@@ -226,6 +227,7 @@
 </script>
 
 <main bind:clientWidth={width} bind:clientHeight={height}>
+  <img class="efi_logo" src={assetUrl("efi_logo.png")} alt="EFI logo" />
   <svg {width} {height}>
     <rect class="chart-background" {width} {height} />
 
@@ -238,17 +240,12 @@
           y1={margin.top - 30}
           y2={height - margin.bottom}
         />
-        <text x={column.x} y={38} text-anchor="middle">
+        <text x={column.x} y={110} text-anchor="middle">
           {column.session.label}
         </text>
-        <text
-          class="session-topic"
-          x={column.x}
-          y={58}
-          text-anchor="middle"
-        >
+        <!-- <text class="session-topic" x={column.x} y={80} text-anchor="middle">
           {column.session.topic}
-        </text>
+        </text> -->
         <text
           class="session-count"
           x={column.x}
@@ -274,69 +271,60 @@
             height="24"
             aria-label={participant.name}
           />
-          <!-- <path class="lane-path" d={`M ${laneStart} ${y} H ${laneEnd}`} /> -->
+          <path class="lane-path" d={`M ${laneStart} ${y} H ${laneEnd}`} />
         </g>
       {/each}
     </g>
 
     <!-- individual artifacts/circles -->
     <g class="artifact-markers">
-      {#each artifacts as artifact (artifact.id)}
+      {#each visibleArtifacts as artifact (artifact.id)}
         <g
           class:active={activeArtifactId === artifact.id}
-          class:sibling={activeArtifact?.groupId === artifact.groupId &&
-            activeArtifactId !== artifact.id}
           class="artifact-marker"
           role="button"
           tabindex="0"
-          aria-label={`${artifact.participant.name}, ${artifact.session.label}: ${artifact.artifact.text}`}
+          aria-label={`${artifact.participant.name}, ${artifact.session.label}${artifact.hasText ? `: ${artifact.text}` : ""}`}
           transform={`translate(${artifact.x} ${artifact.y})`}
+          style={`--marker-scale: ${activeArtifactId === artifact.id ? 1 : artifact.markerScale}; --content-size: ${(artifact.expandedRadius - 1) * 2}px; --content-offset: ${-artifact.expandedRadius + 1}px; --marker-font-size: ${activeArtifactId === artifact.id ? 11 : artifact.markerTextSize / artifact.markerScale}px;`}
           onclick={(event) => {
             event.stopPropagation();
             showArtifact(artifact.id);
           }}
           onkeydown={(event) => handleMarkerKeydown(event, artifact.id)}
         >
-          <title>{artifact.participant.name}, {artifact.session.label}</title>
-          <circle
-            class="marker-ring"
-            r={artifact.radius}
-            style={`--active-radius: ${artifact.radius + 4}px;`}
-          />
+          <title>
+            {artifact.participant.name}, {artifact.session.label}{artifact.hasText
+              ? `: ${artifact.text}`
+              : ""}
+          </title>
+          <g class="marker-visual">
+            <circle class="marker-fill" r={artifact.expandedRadius} />
+            <foreignObject
+              class="marker-content"
+              x={-artifact.expandedRadius + 1}
+              y={-artifact.expandedRadius + 1}
+              width={(artifact.expandedRadius - 1) * 2}
+              height={(artifact.expandedRadius - 1) * 2}
+            >
+              <div
+                class:has-text={artifact.hasText}
+                class="marker-content-inner"
+                style={`background-image: ${artifact.hasText ? "none" : `url(${assetUrl("uni_logo.png")})`};`}
+              >
+                {#if artifact.hasText}
+                  {artifact.text}
+                {/if}
+              </div>
+            </foreignObject>
+            <circle class="marker-ring" r={artifact.expandedRadius} />
+          </g>
           <!-- <circle class="marker-dot" r="4.5" /> -->
         </g>
       {/each}
     </g>
   </svg>
 
-  {#if activeArtifact}
-    <aside
-      class="artifact-panel"
-      class:expanded={isPanelExpanded}
-      style={panelStyle}
-      transition:scale={{ duration: 160, start: 0.94, opacity: 0 }}
-    >
-      <button
-        class="panel-expand"
-        type="button"
-        aria-label={isPanelExpanded
-          ? "Shrink artifact details"
-          : "Expand artifact details"}
-        aria-pressed={isPanelExpanded}
-        onclick={togglePanelExpanded}
-      >
-        {isPanelExpanded ? "Shrink" : "Expand"}
-      </button>
-      <img src={assetUrl(activeArtifact.artifact.image)} alt="" />
-      <div>
-        <p class="panel-kicker">
-          {activeArtifact.participant.name} / {activeArtifact.session.label}
-        </p>
-        <h2>{activeArtifact.session.topic}</h2>
-        <p>{activeArtifact.artifact.text}</p>
-      </div>
-    </aside>
-  {/if}
 </main>
 
 <style>
@@ -354,10 +342,19 @@
       #eef2f1;
   }
 
+  .efi_logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 320px;
+    height: auto;
+    z-index: 3;
+  }
+
   svg {
     display: block;
     font-family:
-      Inter,
+      Montserrat,
       ui-sans-serif,
       system-ui,
       -apple-system,
@@ -382,12 +379,6 @@
     font-weight: 700;
   }
 
-  .session-guides .session-topic {
-    fill: #69757c;
-    font-size: 12px;
-    font-weight: 500;
-  }
-
   .session-guides .session-count {
     fill: #8a9398;
     font-size: 11px;
@@ -403,27 +394,86 @@
     cursor: pointer;
     outline: none;
     touch-action: manipulation;
+    --marker-scale: 1;
+    --marker-font-size: 8px;
+    --marker-padding: 0 4px;
+    --marker-line-height: 1;
   }
 
-  /* .artifact-marker:nth-child(4n + 2) {
-    color: #6b7fb5;
+  .marker-visual {
+    transform: scale(var(--marker-scale));
+    transform-box: view-box;
+    transform-origin: 0 0;
+    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .artifact-marker:nth-child(4n + 3) {
-    color: #c8663d;
+  .marker-fill {
+    fill: #fffefe;
+    filter: drop-shadow(0 2px 5px rgba(38, 50, 56, 0.18));
+    pointer-events: visiblePainted;
   }
 
-  .artifact-marker:nth-child(4n) {
-    color: #8b6f2e;
-  } */
+  .marker-content {
+    pointer-events: none;
+  }
+
+  .marker-content-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    color: #263238;
+    font-family:
+      Montserrat,
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    font-size: var(--marker-font-size);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: var(--marker-line-height);
+    padding: var(--marker-padding);
+    text-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.86),
+      1px 0 0 rgba(255, 255, 255, 0.86),
+      0 -1px 0 rgba(255, 255, 255, 0.86),
+      -1px 0 0 rgba(255, 255, 255, 0.86);
+    user-select: none;
+    white-space: nowrap;
+    transition:
+      font-size 180ms ease,
+      line-height 180ms ease,
+      padding 180ms ease;
+  }
+
+  .marker-content-inner.has-text {
+    padding-left: 4px;
+  }
+
+  .artifact-marker.active {
+    --marker-padding: 18px;
+    --marker-line-height: 1.25;
+  }
+
+  .artifact-marker.active .marker-content-inner.has-text {
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+  }
 
   .marker-ring {
-    fill: #dfdfdf;
+    fill: none;
     stroke: currentColor;
-    stroke-width: 1;
-    transition:
-      r 140ms ease,
-      stroke-width 140ms ease;
+    stroke-width: 0;
+    pointer-events: none;
+    transition: stroke-width 140ms ease;
   }
 
   /* .marker-dot {
@@ -434,122 +484,7 @@
   .artifact-marker:hover .marker-ring,
   .artifact-marker:focus .marker-ring,
   .artifact-marker.active .marker-ring {
-    r: var(--active-radius);
     stroke-width: 2.75;
   }
 
-  .artifact-marker.sibling .marker-ring {
-    fill: #f2f4f1;
-    stroke-width: 2.4;
-  }
-
-  .artifact-panel {
-    position: absolute;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: 12px;
-    padding: 44px 12px 12px;
-    border: 1px solid rgba(38, 50, 56, 0.16);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.97);
-    box-shadow: 0 16px 44px rgba(38, 50, 56, 0.16);
-    color: #263238;
-    transform-origin: center;
-    transition:
-      left 220ms ease,
-      top 220ms ease,
-      width 220ms ease,
-      height 220ms ease,
-      padding 220ms ease,
-      gap 220ms ease,
-      box-shadow 220ms ease;
-  }
-
-  .artifact-panel.expanded {
-    grid-template-columns: minmax(180px, 42%) 1fr;
-    gap: 20px;
-    padding: 56px 24px 24px;
-  }
-
-  .panel-expand {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    min-width: 78px;
-    height: 30px;
-    border: 1px solid rgba(38, 50, 56, 0.18);
-    border-radius: 6px;
-    background: #ffffff;
-    color: #263238;
-    cursor: pointer;
-    font: inherit;
-    font-size: 12px;
-    font-weight: 700;
-    touch-action: manipulation;
-    transition:
-      background-color 160ms ease,
-      border-color 160ms ease;
-  }
-
-  .artifact-panel img {
-    width: 96px;
-    aspect-ratio: 16 / 9;
-    border-radius: 6px;
-    object-fit: cover;
-    background: #eef2f1;
-    transition:
-      width 220ms ease,
-      height 220ms ease;
-  }
-
-  .artifact-panel.expanded img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .artifact-panel h2,
-  .artifact-panel p {
-    margin: 0;
-  }
-
-  .artifact-panel h2 {
-    margin-bottom: 5px;
-    font-size: 15px;
-    line-height: 1.2;
-    transition: font-size 220ms ease;
-  }
-
-  .artifact-panel p {
-    font-size: 12px;
-    line-height: 1.45;
-    transition: font-size 220ms ease;
-  }
-
-  .artifact-panel.expanded h2 {
-    font-size: 24px;
-  }
-
-  .artifact-panel.expanded p {
-    font-size: 18px;
-  }
-
-  .artifact-panel .panel-kicker {
-    margin-bottom: 4px;
-    color: #647078;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0;
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 779px) {
-    .artifact-panel {
-      grid-template-columns: 1fr;
-    }
-
-    .artifact-panel img {
-      width: 100%;
-    }
-  }
 </style>
