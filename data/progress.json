@@ -41,21 +41,6 @@
             "id": "p01-session-1-a3",
             "text": "Noted early questions about reliability and trust.",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p01-session-1-a4",
-            "text": "Noted early questions about reliability and trust.",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p01-session-1-a5",
-            "text": "Noted early questions about reliability and trust.",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p01-session-1-a6",
-            "text": "Noted early questions about reliability and trust.",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -72,21 +57,6 @@
           {
             "id": "p01-session-2-a3",
             "text": "Documented a practical next step (Participant 1, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p01-session-2-a4",
-            "text": "Added evidence of progress from the exercise (Participant 1, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p01-session-2-a5",
-            "text": "Noted a peer comparison or review point (Participant 1, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p01-session-2-a6",
-            "text": "Captured one more question for later use (Participant 1, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -105,31 +75,6 @@
             "id": "p01-session-3-a3",
             "text": "Added evidence of progress from the exercise (Participant 1, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p01-session-3-a4",
-            "text": "Noted a peer comparison or review point (Participant 1, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p01-session-3-a5",
-            "text": "Captured one more question for later use (Participant 1, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p01-session-3-a6",
-            "text": "Captured another artifact from the activity (Participant 1, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p01-session-3-a7",
-            "text": "Added a follow-up reflection from the discussion (Participant 1, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p01-session-3-a8",
-            "text": "Recorded a small example from the session task (Participant 1, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -146,16 +91,6 @@
           {
             "id": "p01-session-4-a3",
             "text": "Noted a peer comparison or review point (Participant 1, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p01-session-4-a4",
-            "text": "Captured one more question for later use (Participant 1, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p01-session-4-a5",
-            "text": "Captured another artifact from the activity (Participant 1, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -180,26 +115,6 @@
             "id": "p02-session-1-a3",
             "text": "Documented a practical next step (Participant 2, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p02-session-1-a4",
-            "text": "Added evidence of progress from the exercise (Participant 2, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p02-session-1-a5",
-            "text": "Noted a peer comparison or review point (Participant 2, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p02-session-1-a6",
-            "text": "Captured one more question for later use (Participant 2, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p02-session-1-a7",
-            "text": "Captured another artifact from the activity (Participant 2, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -211,16 +126,6 @@
           {
             "id": "p02-session-2-a2",
             "text": "Documented a practical next step (Participant 2, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p02-session-2-a3",
-            "text": "Added evidence of progress from the exercise (Participant 2, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p02-session-2-a4",
-            "text": "Noted a peer comparison or review point (Participant 2, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -239,21 +144,6 @@
             "id": "p02-session-3-a3",
             "text": "Refined the review checklist with peer feedback.",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p02-session-3-a4",
-            "text": "Captured one more question for later use (Participant 2, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p02-session-3-a5",
-            "text": "Captured another artifact from the activity (Participant 2, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p02-session-3-a6",
-            "text": "Added a follow-up reflection from the discussion (Participant 2, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -270,31 +160,6 @@
           {
             "id": "p02-session-4-a3",
             "text": "Captured one more question for later use (Participant 2, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p02-session-4-a4",
-            "text": "Captured another artifact from the activity (Participant 2, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p02-session-4-a5",
-            "text": "Added a follow-up reflection from the discussion (Participant 2, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p02-session-4-a6",
-            "text": "Recorded a small example from the session task (Participant 2, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p02-session-4-a7",
-            "text": "Saved a note about confidence and uncertainty (Participant 2, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p02-session-4-a8",
-            "text": "Documented a practical next step (Participant 2, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -319,16 +184,6 @@
             "id": "p03-session-1-a3",
             "text": "Added evidence of progress from the exercise (Participant 3, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p03-session-1-a4",
-            "text": "Noted a peer comparison or review point (Participant 3, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p03-session-1-a5",
-            "text": "Captured one more question for later use (Participant 3, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -345,26 +200,6 @@
           {
             "id": "p03-session-2-a3",
             "text": "Noted how constraints changed the response quality.",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p03-session-2-a4",
-            "text": "Captured one more question for later use (Participant 3, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p03-session-2-a5",
-            "text": "Captured another artifact from the activity (Participant 3, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p03-session-2-a6",
-            "text": "Added a follow-up reflection from the discussion (Participant 3, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p03-session-2-a7",
-            "text": "Recorded a small example from the session task (Participant 3, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -383,11 +218,6 @@
             "id": "p03-session-3-a3",
             "text": "Captured one more question for later use (Participant 3, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p03-session-3-a4",
-            "text": "Captured another artifact from the activity (Participant 3, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -404,21 +234,6 @@
           {
             "id": "p03-session-4-a3",
             "text": "Captured another artifact from the activity (Participant 3, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p03-session-4-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 3, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p03-session-4-a5",
-            "text": "Recorded a small example from the session task (Participant 3, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p03-session-4-a6",
-            "text": "Saved a note about confidence and uncertainty (Participant 3, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -443,31 +258,6 @@
             "id": "p04-session-1-a3",
             "text": "Noted a peer comparison or review point (Participant 4, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p04-session-1-a4",
-            "text": "Captured one more question for later use (Participant 4, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p04-session-1-a5",
-            "text": "Captured another artifact from the activity (Participant 4, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p04-session-1-a6",
-            "text": "Added a follow-up reflection from the discussion (Participant 4, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p04-session-1-a7",
-            "text": "Recorded a small example from the session task (Participant 4, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p04-session-1-a8",
-            "text": "Saved a note about confidence and uncertainty (Participant 4, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -484,16 +274,6 @@
           {
             "id": "p04-session-2-a3",
             "text": "Captured one more question for later use (Participant 4, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p04-session-2-a4",
-            "text": "Captured another artifact from the activity (Participant 4, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p04-session-2-a5",
-            "text": "Added a follow-up reflection from the discussion (Participant 4, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -512,26 +292,6 @@
             "id": "p04-session-3-a3",
             "text": "Captured another artifact from the activity (Participant 4, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p04-session-3-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 4, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p04-session-3-a5",
-            "text": "Recorded a small example from the session task (Participant 4, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p04-session-3-a6",
-            "text": "Saved a note about confidence and uncertainty (Participant 4, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p04-session-3-a7",
-            "text": "Documented a practical next step (Participant 4, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -543,16 +303,6 @@
           {
             "id": "p04-session-4-a2",
             "text": "Shared a final example with review checkpoints.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p04-session-4-a3",
-            "text": "Recorded remaining questions for future practice.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p04-session-4-a4",
-            "text": "Recorded a small example from the session task (Participant 4, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -572,26 +322,6 @@
             "id": "p05-session-1-a2",
             "text": "Mapped where confidence was high and low.",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p05-session-1-a3",
-            "text": "Selected an example to revisit each session.",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p05-session-1-a4",
-            "text": "Captured another artifact from the activity (Participant 5, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p05-session-1-a5",
-            "text": "Added a follow-up reflection from the discussion (Participant 5, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p05-session-1-a6",
-            "text": "Recorded a small example from the session task (Participant 5, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -608,31 +338,6 @@
           {
             "id": "p05-session-2-a3",
             "text": "Captured another artifact from the activity (Participant 5, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p05-session-2-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 5, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p05-session-2-a5",
-            "text": "Recorded a small example from the session task (Participant 5, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p05-session-2-a6",
-            "text": "Saved a note about confidence and uncertainty (Participant 5, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p05-session-2-a7",
-            "text": "Documented a practical next step (Participant 5, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p05-session-2-a8",
-            "text": "Added evidence of progress from the exercise (Participant 5, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -651,16 +356,6 @@
             "id": "p05-session-3-a3",
             "text": "Added a follow-up reflection from the discussion (Participant 5, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p05-session-3-a4",
-            "text": "Recorded a small example from the session task (Participant 5, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p05-session-3-a5",
-            "text": "Saved a note about confidence and uncertainty (Participant 5, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -672,31 +367,6 @@
           {
             "id": "p05-session-4-a2",
             "text": "Added a follow-up reflection from the discussion (Participant 5, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p05-session-4-a3",
-            "text": "Recorded a small example from the session task (Participant 5, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p05-session-4-a4",
-            "text": "Saved a note about confidence and uncertainty (Participant 5, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p05-session-4-a5",
-            "text": "Documented a practical next step (Participant 5, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p05-session-4-a6",
-            "text": "Added evidence of progress from the exercise (Participant 5, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p05-session-4-a7",
-            "text": "Noted a peer comparison or review point (Participant 5, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -721,11 +391,6 @@
             "id": "p06-session-1-a3",
             "text": "Captured another artifact from the activity (Participant 6, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p06-session-1-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 6, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -737,26 +402,6 @@
           {
             "id": "p06-session-2-a2",
             "text": "Adjusted a prompt to reduce vague output.",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p06-session-2-a3",
-            "text": "Added a follow-up reflection from the discussion (Participant 6, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p06-session-2-a4",
-            "text": "Recorded a small example from the session task (Participant 6, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p06-session-2-a5",
-            "text": "Saved a note about confidence and uncertainty (Participant 6, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p06-session-2-a6",
-            "text": "Documented a practical next step (Participant 6, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -770,36 +415,6 @@
             "id": "p06-session-3-a2",
             "text": "Logged what still needed human judgement.",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p06-session-3-a3",
-            "text": "Practised identifying missing context.",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p06-session-3-a4",
-            "text": "Saved a note about confidence and uncertainty (Participant 6, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p06-session-3-a5",
-            "text": "Documented a practical next step (Participant 6, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p06-session-3-a6",
-            "text": "Added evidence of progress from the exercise (Participant 6, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p06-session-3-a7",
-            "text": "Noted a peer comparison or review point (Participant 6, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p06-session-3-a8",
-            "text": "Captured one more question for later use (Participant 6, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -811,21 +426,6 @@
           {
             "id": "p06-session-4-a2",
             "text": "Shared how the workflow would be checked.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p06-session-4-a3",
-            "text": "Saved a note about confidence and uncertainty (Participant 6, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p06-session-4-a4",
-            "text": "Documented a practical next step (Participant 6, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p06-session-4-a5",
-            "text": "Added evidence of progress from the exercise (Participant 6, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -850,26 +450,6 @@
             "id": "p07-session-1-a3",
             "text": "Added a follow-up reflection from the discussion (Participant 7, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p07-session-1-a4",
-            "text": "Recorded a small example from the session task (Participant 7, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p07-session-1-a5",
-            "text": "Saved a note about confidence and uncertainty (Participant 7, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p07-session-1-a6",
-            "text": "Documented a practical next step (Participant 7, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p07-session-1-a7",
-            "text": "Added evidence of progress from the exercise (Participant 7, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -882,16 +462,6 @@
             "id": "p07-session-2-a2",
             "text": "Compared outputs from two prompt variations.",
             "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p07-session-2-a3",
-            "text": "Kept the prompt with clearer constraints.",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p07-session-2-a4",
-            "text": "Saved a note about confidence and uncertainty (Participant 7, Session 2).",
-            "image": "/img/session-2.svg"
           }
         ],
         "session-3": [
@@ -903,26 +473,6 @@
           {
             "id": "p07-session-3-a2",
             "text": "Recorded a small example from the session task (Participant 7, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p07-session-3-a3",
-            "text": "Saved a note about confidence and uncertainty (Participant 7, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p07-session-3-a4",
-            "text": "Documented a practical next step (Participant 7, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p07-session-3-a5",
-            "text": "Added evidence of progress from the exercise (Participant 7, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p07-session-3-a6",
-            "text": "Noted a peer comparison or review point (Participant 7, Session 3).",
             "image": "/img/session-3.svg"
           }
         ],
@@ -940,31 +490,6 @@
           {
             "id": "p07-session-4-a3",
             "text": "Documented a practical next step (Participant 7, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p07-session-4-a4",
-            "text": "Added evidence of progress from the exercise (Participant 7, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p07-session-4-a5",
-            "text": "Noted a peer comparison or review point (Participant 7, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p07-session-4-a6",
-            "text": "Captured one more question for later use (Participant 7, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p07-session-4-a7",
-            "text": "Captured another artifact from the activity (Participant 7, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p07-session-4-a8",
-            "text": "Added a follow-up reflection from the discussion (Participant 7, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -984,21 +509,6 @@
             "id": "p08-session-1-a2",
             "text": "Added a follow-up reflection from the discussion (Participant 8, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p08-session-1-a3",
-            "text": "Recorded a small example from the session task (Participant 8, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p08-session-1-a4",
-            "text": "Saved a note about confidence and uncertainty (Participant 8, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p08-session-1-a5",
-            "text": "Documented a practical next step (Participant 8, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1016,26 +526,6 @@
             "id": "p08-session-2-a3",
             "text": "Saved a note about confidence and uncertainty (Participant 8, Session 2).",
             "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p08-session-2-a4",
-            "text": "Documented a practical next step (Participant 8, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p08-session-2-a5",
-            "text": "Added evidence of progress from the exercise (Participant 8, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p08-session-2-a6",
-            "text": "Noted a peer comparison or review point (Participant 8, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p08-session-2-a7",
-            "text": "Captured one more question for later use (Participant 8, Session 2).",
-            "image": "/img/session-2.svg"
           }
         ],
         "session-3": [
@@ -1047,16 +537,6 @@
           {
             "id": "p08-session-3-a2",
             "text": "Compared scores with a peer review.",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p08-session-3-a3",
-            "text": "Documented a practical next step (Participant 8, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p08-session-3-a4",
-            "text": "Added evidence of progress from the exercise (Participant 8, Session 3).",
             "image": "/img/session-3.svg"
           }
         ],
@@ -1074,21 +554,6 @@
           {
             "id": "p08-session-4-a3",
             "text": "Named one boundary for future use.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p08-session-4-a4",
-            "text": "Noted a peer comparison or review point (Participant 8, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p08-session-4-a5",
-            "text": "Captured one more question for later use (Participant 8, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p08-session-4-a6",
-            "text": "Captured another artifact from the activity (Participant 8, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -1113,31 +578,6 @@
             "id": "p09-session-1-a3",
             "text": "Saved a note about confidence and uncertainty (Participant 9, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p09-session-1-a4",
-            "text": "Documented a practical next step (Participant 9, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p09-session-1-a5",
-            "text": "Added evidence of progress from the exercise (Participant 9, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p09-session-1-a6",
-            "text": "Noted a peer comparison or review point (Participant 9, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p09-session-1-a7",
-            "text": "Captured one more question for later use (Participant 9, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p09-session-1-a8",
-            "text": "Captured another artifact from the activity (Participant 9, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1149,21 +589,6 @@
           {
             "id": "p09-session-2-a2",
             "text": "Saved a note about confidence and uncertainty (Participant 9, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p09-session-2-a3",
-            "text": "Documented a practical next step (Participant 9, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p09-session-2-a4",
-            "text": "Added evidence of progress from the exercise (Participant 9, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p09-session-2-a5",
-            "text": "Noted a peer comparison or review point (Participant 9, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -1182,26 +607,6 @@
             "id": "p09-session-3-a3",
             "text": "Added a note about evidence quality.",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p09-session-3-a4",
-            "text": "Noted a peer comparison or review point (Participant 9, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p09-session-3-a5",
-            "text": "Captured one more question for later use (Participant 9, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p09-session-3-a6",
-            "text": "Captured another artifact from the activity (Participant 9, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p09-session-3-a7",
-            "text": "Added a follow-up reflection from the discussion (Participant 9, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -1218,11 +623,6 @@
           {
             "id": "p09-session-4-a3",
             "text": "Noted a peer comparison or review point (Participant 9, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p09-session-4-a4",
-            "text": "Captured one more question for later use (Participant 9, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -1247,21 +647,6 @@
             "id": "p10-session-1-a3",
             "text": "Flagged where accuracy mattered most.",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p10-session-1-a4",
-            "text": "Added evidence of progress from the exercise (Participant 10, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p10-session-1-a5",
-            "text": "Noted a peer comparison or review point (Participant 10, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p10-session-1-a6",
-            "text": "Captured one more question for later use (Participant 10, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1278,31 +663,6 @@
           {
             "id": "p10-session-2-a3",
             "text": "Added evidence of progress from the exercise (Participant 10, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p10-session-2-a4",
-            "text": "Noted a peer comparison or review point (Participant 10, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p10-session-2-a5",
-            "text": "Captured one more question for later use (Participant 10, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p10-session-2-a6",
-            "text": "Captured another artifact from the activity (Participant 10, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p10-session-2-a7",
-            "text": "Added a follow-up reflection from the discussion (Participant 10, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p10-session-2-a8",
-            "text": "Recorded a small example from the session task (Participant 10, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -1321,16 +681,6 @@
             "id": "p10-session-3-a3",
             "text": "Noted a peer comparison or review point (Participant 10, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p10-session-3-a4",
-            "text": "Captured one more question for later use (Participant 10, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p10-session-3-a5",
-            "text": "Captured another artifact from the activity (Participant 10, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -1342,31 +692,6 @@
           {
             "id": "p10-session-4-a2",
             "text": "Recorded a final review routine.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p10-session-4-a3",
-            "text": "Captured one more question for later use (Participant 10, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p10-session-4-a4",
-            "text": "Captured another artifact from the activity (Participant 10, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p10-session-4-a5",
-            "text": "Added a follow-up reflection from the discussion (Participant 10, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p10-session-4-a6",
-            "text": "Recorded a small example from the session task (Participant 10, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p10-session-4-a7",
-            "text": "Saved a note about confidence and uncertainty (Participant 10, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -1391,11 +716,6 @@
             "id": "p11-session-1-a3",
             "text": "Added evidence of progress from the exercise (Participant 11, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p11-session-1-a4",
-            "text": "Noted a peer comparison or review point (Participant 11, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1407,26 +727,6 @@
           {
             "id": "p11-session-2-a2",
             "text": "Compared a formal and plain-language response.",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p11-session-2-a3",
-            "text": "Noted a peer comparison or review point (Participant 11, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p11-session-2-a4",
-            "text": "Captured one more question for later use (Participant 11, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p11-session-2-a5",
-            "text": "Captured another artifact from the activity (Participant 11, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p11-session-2-a6",
-            "text": "Added a follow-up reflection from the discussion (Participant 11, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -1445,31 +745,6 @@
             "id": "p11-session-3-a3",
             "text": "Captured one more question for later use (Participant 11, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p11-session-3-a4",
-            "text": "Captured another artifact from the activity (Participant 11, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p11-session-3-a5",
-            "text": "Added a follow-up reflection from the discussion (Participant 11, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p11-session-3-a6",
-            "text": "Recorded a small example from the session task (Participant 11, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p11-session-3-a7",
-            "text": "Saved a note about confidence and uncertainty (Participant 11, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p11-session-3-a8",
-            "text": "Documented a practical next step (Participant 11, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -1486,16 +761,6 @@
           {
             "id": "p11-session-4-a3",
             "text": "Defined a stopping rule for uncertain output.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p11-session-4-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 11, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p11-session-4-a5",
-            "text": "Recorded a small example from the session task (Participant 11, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -1520,26 +785,6 @@
             "id": "p12-session-1-a3",
             "text": "Noted a peer comparison or review point (Participant 12, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p12-session-1-a4",
-            "text": "Captured one more question for later use (Participant 12, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p12-session-1-a5",
-            "text": "Captured another artifact from the activity (Participant 12, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p12-session-1-a6",
-            "text": "Added a follow-up reflection from the discussion (Participant 12, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p12-session-1-a7",
-            "text": "Recorded a small example from the session task (Participant 12, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1551,16 +796,6 @@
           {
             "id": "p12-session-2-a2",
             "text": "Added examples of useful and unhelpful responses.",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p12-session-2-a3",
-            "text": "Tested whether the output matched the requested format.",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p12-session-2-a4",
-            "text": "Captured another artifact from the activity (Participant 12, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -1579,21 +814,6 @@
             "id": "p12-session-3-a3",
             "text": "Captured another artifact from the activity (Participant 12, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p12-session-3-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 12, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p12-session-3-a5",
-            "text": "Recorded a small example from the session task (Participant 12, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p12-session-3-a6",
-            "text": "Saved a note about confidence and uncertainty (Participant 12, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -1610,31 +830,6 @@
           {
             "id": "p12-session-4-a3",
             "text": "Added a follow-up reflection from the discussion (Participant 12, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p12-session-4-a4",
-            "text": "Recorded a small example from the session task (Participant 12, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p12-session-4-a5",
-            "text": "Saved a note about confidence and uncertainty (Participant 12, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p12-session-4-a6",
-            "text": "Documented a practical next step (Participant 12, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p12-session-4-a7",
-            "text": "Added evidence of progress from the exercise (Participant 12, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p12-session-4-a8",
-            "text": "Noted a peer comparison or review point (Participant 12, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -1654,21 +849,6 @@
             "id": "p13-session-1-a2",
             "text": "Noted differences between drafting and deciding.",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p13-session-1-a3",
-            "text": "Captured one more question for later use (Participant 13, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p13-session-1-a4",
-            "text": "Captured another artifact from the activity (Participant 13, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p13-session-1-a5",
-            "text": "Added a follow-up reflection from the discussion (Participant 13, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1686,26 +866,6 @@
             "id": "p13-session-2-a3",
             "text": "Captured another artifact from the activity (Participant 13, Session 2).",
             "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p13-session-2-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 13, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p13-session-2-a5",
-            "text": "Recorded a small example from the session task (Participant 13, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p13-session-2-a6",
-            "text": "Saved a note about confidence and uncertainty (Participant 13, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p13-session-2-a7",
-            "text": "Documented a practical next step (Participant 13, Session 2).",
-            "image": "/img/session-2.svg"
           }
         ],
         "session-3": [
@@ -1718,16 +878,6 @@
             "id": "p13-session-3-a2",
             "text": "Scored one output before and after revision.",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p13-session-3-a3",
-            "text": "Recorded which criteria were most useful.",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p13-session-3-a4",
-            "text": "Recorded a small example from the session task (Participant 13, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -1739,26 +889,6 @@
           {
             "id": "p13-session-4-a2",
             "text": "Shared a final workflow summary.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p13-session-4-a3",
-            "text": "Recorded a small example from the session task (Participant 13, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p13-session-4-a4",
-            "text": "Saved a note about confidence and uncertainty (Participant 13, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p13-session-4-a5",
-            "text": "Documented a practical next step (Participant 13, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p13-session-4-a6",
-            "text": "Added evidence of progress from the exercise (Participant 13, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -1783,31 +913,6 @@
             "id": "p14-session-1-a3",
             "text": "Captured another artifact from the activity (Participant 14, Session 1).",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p14-session-1-a4",
-            "text": "Added a follow-up reflection from the discussion (Participant 14, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p14-session-1-a5",
-            "text": "Recorded a small example from the session task (Participant 14, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p14-session-1-a6",
-            "text": "Saved a note about confidence and uncertainty (Participant 14, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p14-session-1-a7",
-            "text": "Documented a practical next step (Participant 14, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p14-session-1-a8",
-            "text": "Added evidence of progress from the exercise (Participant 14, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1824,16 +929,6 @@
           {
             "id": "p14-session-2-a3",
             "text": "Added a follow-up reflection from the discussion (Participant 14, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p14-session-2-a4",
-            "text": "Recorded a small example from the session task (Participant 14, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p14-session-2-a5",
-            "text": "Saved a note about confidence and uncertainty (Participant 14, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -1852,26 +947,6 @@
             "id": "p14-session-3-a3",
             "text": "Recorded a small example from the session task (Participant 14, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p14-session-3-a4",
-            "text": "Saved a note about confidence and uncertainty (Participant 14, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p14-session-3-a5",
-            "text": "Documented a practical next step (Participant 14, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p14-session-3-a6",
-            "text": "Added evidence of progress from the exercise (Participant 14, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p14-session-3-a7",
-            "text": "Noted a peer comparison or review point (Participant 14, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -1888,11 +963,6 @@
           {
             "id": "p14-session-4-a3",
             "text": "Shared a brief closing reflection.",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p14-session-4-a4",
-            "text": "Documented a practical next step (Participant 14, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
@@ -1917,21 +987,6 @@
             "id": "p15-session-1-a3",
             "text": "Captured one concern to monitor later.",
             "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p15-session-1-a4",
-            "text": "Recorded a small example from the session task (Participant 15, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p15-session-1-a5",
-            "text": "Saved a note about confidence and uncertainty (Participant 15, Session 1).",
-            "image": "/img/session-1.svg"
-          },
-          {
-            "id": "p15-session-1-a6",
-            "text": "Documented a practical next step (Participant 15, Session 1).",
-            "image": "/img/session-1.svg"
           }
         ],
         "session-2": [
@@ -1948,31 +1003,6 @@
           {
             "id": "p15-session-2-a3",
             "text": "Recorded a small example from the session task (Participant 15, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p15-session-2-a4",
-            "text": "Saved a note about confidence and uncertainty (Participant 15, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p15-session-2-a5",
-            "text": "Documented a practical next step (Participant 15, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p15-session-2-a6",
-            "text": "Added evidence of progress from the exercise (Participant 15, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p15-session-2-a7",
-            "text": "Noted a peer comparison or review point (Participant 15, Session 2).",
-            "image": "/img/session-2.svg"
-          },
-          {
-            "id": "p15-session-2-a8",
-            "text": "Captured one more question for later use (Participant 15, Session 2).",
             "image": "/img/session-2.svg"
           }
         ],
@@ -1991,16 +1021,6 @@
             "id": "p15-session-3-a3",
             "text": "Saved a note about confidence and uncertainty (Participant 15, Session 3).",
             "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p15-session-3-a4",
-            "text": "Documented a practical next step (Participant 15, Session 3).",
-            "image": "/img/session-3.svg"
-          },
-          {
-            "id": "p15-session-3-a5",
-            "text": "Added evidence of progress from the exercise (Participant 15, Session 3).",
-            "image": "/img/session-3.svg"
           }
         ],
         "session-4": [
@@ -2017,26 +1037,6 @@
           {
             "id": "p15-session-4-a3",
             "text": "Documented a practical next step (Participant 15, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p15-session-4-a4",
-            "text": "Added evidence of progress from the exercise (Participant 15, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p15-session-4-a5",
-            "text": "Noted a peer comparison or review point (Participant 15, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p15-session-4-a6",
-            "text": "Captured one more question for later use (Participant 15, Session 4).",
-            "image": "/img/session-4.svg"
-          },
-          {
-            "id": "p15-session-4-a7",
-            "text": "Captured another artifact from the activity (Participant 15, Session 4).",
             "image": "/img/session-4.svg"
           }
         ]
