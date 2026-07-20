@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
   import {
     forceCollide,
     forceSimulation,
@@ -46,6 +46,12 @@
   const minMarkerRadius = 15;
   const maxMarkerRadius = 45;
   const collisionPadding = 2;
+  const packingStrength = 1;
+  const packingIterations = 10;
+  const sessionColumnStrength = 0.08;
+  const verticalCenterStrength = 0.012;
+  let markerSimulation = null;
+  let activeArtifactId = null;
 
   function stableRadius(id) {
     let hash = 0;
@@ -81,7 +87,11 @@
       return sessionArtifacts.map((artifact, index) => {
         const radius = stableRadius(artifact.id);
         const text = artifact.text?.trim() ?? "";
-        const expandedRadius = activeMarkerRadius({ radius, text, hasText: text.length > 0 });
+          const expandedRadius = activeMarkerRadius({
+            radius,
+            text,
+            hasText: text.length > 0,
+          });
 
         return {
           id: artifact.id,
@@ -100,52 +110,136 @@
     }),
   );
 
-  function layoutSessionColumns(nodes) {
-    const top = margin.top + maxMarkerRadius;
-    const bottom = height - margin.bottom - maxMarkerRadius;
-    const centerY = (top + bottom) / 2;
+  function layoutBounds() {
+    return {
+      top: margin.top,
+      right: width,
+      bottom: height - margin.bottom,
+      left: 0,
+      centerY: (margin.top + height - margin.bottom) / 2,
+    };
+  }
+
+  function markerCollisionRadius(node) {
+    return (
+      (node.id === activeArtifactId ? node.expandedRadius : node.radius) +
+      collisionPadding
+    );
+  }
+
+  function constrainMarker(node) {
+    const bounds = layoutBounds();
+    const radius = markerCollisionRadius(node);
+
+    node.x = Math.max(
+      bounds.left + radius,
+      Math.min(bounds.right - radius, node.x),
+    );
+    node.y = Math.max(
+      bounds.top + radius,
+      Math.min(bounds.bottom - radius, node.y),
+    );
+
+    return node;
+  }
+
+  function createBoundsForce() {
+    let nodes = [];
+
+    function force() {
+      for (const node of nodes) {
+        constrainMarker(node);
+      }
+    }
+
+    force.initialize = (nextNodes) => {
+      nodes = nextNodes;
+    };
+
+    return force;
+  }
+
+  function refreshCollisionForce() {
+    if (!markerSimulation) {
+      return;
+    }
+
+    markerSimulation
+      .force("collide")
+      .radius(markerCollisionRadius)
+      .strength(packingStrength)
+      .iterations(packingIterations);
+
+    markerSimulation.alpha(0.85).restart();
+  }
+
+  function syncMarkerSimulation(nodes) {
+    if (!nodes.length || width <= 0 || height <= 0) {
+      markerSimulation?.stop();
+      markerSimulation = null;
+      artifacts = [];
+      return;
+    }
+
+    const centerY = layoutBounds().centerY;
+    const previousNodes = new Map(artifacts.map((node) => [node.id, node]));
     const positioned = nodes
       .map((node, index) => {
         const targetX = sessionScale(node.session.id);
         const angle = ((index * 137.5) % 360) * (Math.PI / 180);
         const radius = 24 + (index % 24) * 3;
+        const previousNode = previousNodes.get(node.id);
 
-        return {
+        return constrainMarker({
           ...node,
           targetX,
-          x: targetX + Math.cos(angle) * radius,
-          y: centerY + Math.sin(angle) * radius,
-        };
+          targetY: centerY,
+          x: previousNode?.x ?? targetX + Math.cos(angle) * radius,
+          y: previousNode?.y ?? centerY + Math.sin(angle) * radius,
+          vx: previousNode?.vx ?? 0,
+          vy: previousNode?.vy ?? 0,
+        });
       })
       .filter((node) => node.targetX != null);
 
-    forceSimulation(positioned)
-      .alpha(1)
-      .alphaDecay(0.018)
-      .velocityDecay(0.42)
-      .force("x", forceX((node) => node.targetX).strength(0.2))
-      .force("y", forceY(centerY).strength(0.035))
-      .force(
-        "collide",
-        forceCollide((node) => node.radius + collisionPadding)
-          .strength(1)
-          .iterations(8),
-      )
-      .stop()
-      .tick(360);
+    if (!markerSimulation) {
+      markerSimulation = forceSimulation(positioned)
+        .alpha(1)
+        .alphaDecay(0.035)
+        .velocityDecay(0.62)
+        .force(
+          "x",
+          forceX((node) => node.targetX).strength(sessionColumnStrength),
+        )
+        .force(
+          "y",
+          forceY((node) => node.targetY).strength(verticalCenterStrength),
+        )
+        .force(
+          "collide",
+          forceCollide(markerCollisionRadius)
+            .strength(packingStrength)
+            .iterations(packingIterations),
+        )
+        .force("bounds", createBoundsForce())
+        .on("tick", () => {
+          artifacts = markerSimulation.nodes().map(constrainMarker);
+        });
 
-    return positioned.map((node) => ({
-      ...node,
-      x: Math.max(node.radius, Math.min(width - node.radius, node.x)),
-      y: Math.max(top, Math.min(bottom, node.y)),
-    }));
+      return;
+    }
+
+    markerSimulation.nodes(positioned);
+    markerSimulation.force("x").x((node) => node.targetX);
+    markerSimulation.force("y").y((node) => node.targetY);
+    refreshCollisionForce();
+    artifacts = positioned;
   }
 
   // positioning of the circles
-  $: artifacts =
-    rawArtifacts.length && width > 0 && height > 0
-      ? layoutSessionColumns(rawArtifacts)
-      : [];
+  let artifacts = [];
+  $: syncMarkerSimulation(rawArtifacts, width, height, sessionScale);
+  $: refreshCollisionForce(activeArtifactId);
   $: visibleArtifacts = [...artifacts].sort(
     (a, b) =>
       Number(a.id === activeArtifactId) - Number(b.id === activeArtifactId),
@@ -165,9 +259,6 @@
       };
     })
     .filter((column) => column.x != null);
-
-  // active artifact
-  let activeArtifactId = null;
 
   // interactions
   function showArtifact(id) {
@@ -224,10 +315,15 @@
       isLoading = false;
     }
   });
+
+  onDestroy(() => {
+    markerSimulation?.stop();
+  });
 </script>
 
 <main bind:clientWidth={width} bind:clientHeight={height}>
   <img class="efi_logo" src={assetUrl("efi_logo.png")} alt="EFI logo" />
+  <img class="grassmarket_logo" src={assetUrl("grassmarket_logo.webp")} alt="GrassMarket logo" />
   <svg {width} {height}>
     <rect class="chart-background" {width} {height} />
 
@@ -334,19 +430,22 @@
     overflow: hidden;
     overscroll-behavior: none;
     touch-action: pan-y;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.92),
-        rgba(246, 247, 248, 0.92)
-      ),
-      #eef2f1;
   }
 
   .efi_logo {
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 320px;
+    width: 300px;
+    height: auto;
+    z-index: 3;
+  }
+
+  .grassmarket_logo {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 160px;
     height: auto;
     z-index: 3;
   }
@@ -364,7 +463,7 @@
   }
 
   .chart-background {
-    fill: #f9faf8;
+    fill: #ffffff;
   }
 
   .session-guides line {
@@ -394,10 +493,15 @@
     cursor: pointer;
     outline: none;
     touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     --marker-scale: 1;
     --marker-font-size: 8px;
     --marker-padding: 0 4px;
     --marker-line-height: 1;
+  }
+
+  .artifact-marker:focus {
+    outline: none;
   }
 
   .marker-visual {
@@ -408,7 +512,7 @@
   }
 
   .marker-fill {
-    fill: #fffefe;
+    fill: #fcfbfb;
     filter: drop-shadow(0 2px 5px rgba(38, 50, 56, 0.18));
     pointer-events: visiblePainted;
   }
@@ -446,6 +550,7 @@
       0 -1px 0 rgba(255, 255, 255, 0.86),
       -1px 0 0 rgba(255, 255, 255, 0.86);
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
     white-space: nowrap;
     transition:
       font-size 180ms ease,
