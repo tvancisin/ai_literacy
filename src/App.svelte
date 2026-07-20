@@ -331,8 +331,13 @@
   bind:clientHeight={height}
   style={`--background-image: url(${assetUrl("img/bg_hr.jpg")});`}
 >
+  <h1 class="visually-hidden">AI Literacy Challenge</h1>
   <img class="efi_logo" src={assetUrl("efi_logo.png")} alt="EFI logo" />
-  <img class="grassmarket_logo" src={assetUrl("grassmarket_logo_nobg.png")} alt="GrassMarket logo" />
+  <img
+    class="grassmarket_logo"
+    src={assetUrl("grassmarket_logo_nobg.png")}
+    alt="GrassMarket logo"
+  />
   <div class="background-image" aria-hidden="true"></div>
   <svg {width} {height}>
     <rect class="chart-background" {width} {height} />
@@ -401,9 +406,8 @@
           onkeydown={(event) => handleMarkerKeydown(event, artifact.id)}
         >
           <title>
-            {artifact.participant.name}, {artifact.session.label}{artifact.hasText
-              ? `: ${artifact.text}`
-              : ""}
+            {artifact.participant.name}, {artifact.session
+              .label}{artifact.hasText ? `: ${artifact.text}` : ""}
           </title>
           <g class="marker-visual">
             <circle class="marker-fill" r={artifact.expandedRadius} />
@@ -434,7 +438,6 @@
       {/each}
     </g>
   </svg>
-
 </main>
 
 <style>
@@ -457,6 +460,16 @@
     opacity: 0.15;
     pointer-events: none;
     z-index: 0;
+  }
+
+  .visually-hidden {
+    font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    z-index: 3;
+    margin: 0;
+    transform: translateX(-50%);
   }
 
   svg {
@@ -658,5 +671,4 @@
   .artifact-marker.active .marker-ring {
     stroke-width: 2;
   }
-
 </style>
