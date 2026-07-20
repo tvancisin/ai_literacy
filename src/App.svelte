@@ -28,7 +28,7 @@
     top: 150,
     right: 50,
     bottom: 40,
-    left: 90,
+    left: 30,
   };
 
   $: sessionScale = scalePoint()
@@ -48,7 +48,7 @@
   const collisionPadding = 2;
   const packingStrength = 1;
   const packingIterations = 10;
-  const sessionColumnStrength = 0.08;
+  const sessionColumnStrength = 0.1;
   const verticalCenterStrength = 0.012;
   let markerSimulation = null;
   let activeArtifactId = null;
@@ -87,11 +87,14 @@
       return sessionArtifacts.map((artifact, index) => {
         const radius = stableRadius(artifact.id);
         const text = artifact.text?.trim() ?? "";
-          const expandedRadius = activeMarkerRadius({
-            radius,
-            text,
-            hasText: text.length > 0,
-          });
+        const image = artifact.image?.trim() ?? "";
+        const hasText = text.length > 0;
+        const hasImage = image.length > 0;
+        const expandedRadius = activeMarkerRadius({
+          radius,
+          text,
+          hasText,
+        });
 
         return {
           id: artifact.id,
@@ -101,7 +104,9 @@
           artifactIndex: index,
           radius,
           text,
-          hasText: text.length > 0,
+          image,
+          hasText,
+          hasImage,
           expandedRadius,
           markerTextSize: markerTextSize(radius),
           markerScale: radius / expandedRadius,
@@ -354,7 +359,7 @@
     </g>
 
     <!-- horizontal participant lines -->
-    <g class="participant-lanes">
+    <!-- <g class="participant-lanes">
       {#each participants as participant}
         {@const y = participantScale(participant.id)}
         <g>
@@ -370,19 +375,20 @@
           <path class="lane-path" d={`M ${laneStart} ${y} H ${laneEnd}`} />
         </g>
       {/each}
-    </g>
+    </g> -->
 
     <!-- individual artifacts/circles -->
     <g class="artifact-markers">
       {#each visibleArtifacts as artifact (artifact.id)}
+        {@const isActive = activeArtifactId === artifact.id}
         <g
-          class:active={activeArtifactId === artifact.id}
+          class:active={isActive}
           class="artifact-marker"
           role="button"
           tabindex="0"
           aria-label={`${artifact.participant.name}, ${artifact.session.label}${artifact.hasText ? `: ${artifact.text}` : ""}`}
           transform={`translate(${artifact.x} ${artifact.y})`}
-          style={`--marker-scale: ${activeArtifactId === artifact.id ? 1 : artifact.markerScale}; --content-size: ${(artifact.expandedRadius - 1) * 2}px; --content-offset: ${-artifact.expandedRadius + 1}px; --marker-font-size: ${activeArtifactId === artifact.id ? 11 : artifact.markerTextSize / artifact.markerScale}px;`}
+          style={`--marker-scale: ${isActive ? 1 : artifact.markerScale}; --content-size: ${(artifact.expandedRadius - 1) * 2}px; --content-offset: ${-artifact.expandedRadius + 1}px; --marker-font-size: ${isActive ? 11 : artifact.markerTextSize / artifact.markerScale}px;`}
           onclick={(event) => {
             event.stopPropagation();
             showArtifact(artifact.id);
@@ -405,11 +411,14 @@
             >
               <div
                 class:has-text={artifact.hasText}
+                class:has-image={artifact.hasImage}
+                class:image-with-text={artifact.hasImage && artifact.hasText}
+                class:text-only={!artifact.hasImage && artifact.hasText}
                 class="marker-content-inner"
-                style={`background-image: ${artifact.hasText ? "none" : `url(${assetUrl("uni_logo.png")})`};`}
+                style={`background-image: ${artifact.hasImage ? `url(${assetUrl(artifact.image)})` : "none"};`}
               >
-                {#if artifact.hasText}
-                  {artifact.text}
+                {#if artifact.hasText && (!artifact.hasImage || isActive)}
+                  <span class="marker-text">{artifact.text}</span>
                 {/if}
               </div>
             </foreignObject>
@@ -513,7 +522,7 @@
 
   .marker-fill {
     fill: #fcfbfb;
-    filter: drop-shadow(0 2px 5px rgba(38, 50, 56, 0.18));
+    filter: drop-shadow(0 2px 5px rgba(38, 50, 56, 0.521));
     pointer-events: visiblePainted;
   }
 
@@ -526,6 +535,7 @@
     width: 100%;
     height: 100%;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-radius: 50%;
     background-position: center;
@@ -544,11 +554,6 @@
     letter-spacing: 0;
     line-height: var(--marker-line-height);
     padding: var(--marker-padding);
-    text-shadow:
-      0 1px 0 rgba(255, 255, 255, 0.86),
-      1px 0 0 rgba(255, 255, 255, 0.86),
-      0 -1px 0 rgba(255, 255, 255, 0.86),
-      -1px 0 0 rgba(255, 255, 255, 0.86);
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     white-space: nowrap;
@@ -558,8 +563,41 @@
       padding 180ms ease;
   }
 
-  .marker-content-inner.has-text {
+  .marker-content-inner.text-only {
+    text-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.86),
+      1px 0 0 rgba(255, 255, 255, 0.86),
+      0 -1px 0 rgba(255, 255, 255, 0.86),
+      -1px 0 0 rgba(255, 255, 255, 0.86);
+  }
+
+  .artifact-marker:not(.active) .marker-content-inner.text-only {
     padding-left: 4px;
+  }
+
+  .marker-content-inner.has-image {
+    padding: 0;
+    text-shadow: none;
+  }
+
+  .marker-content-inner.image-with-text {
+    align-items: flex-end;
+  }
+
+  .marker-text {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .marker-content-inner.image-with-text .marker-text {
+    width: 100%;
+    padding: 4px 8px 6px;
+    background: rgba(16, 24, 28, 0.68);
+    color: #ffffff;
+    line-height: 1.12;
+    text-align: center;
   }
 
   .artifact-marker.active {
@@ -567,9 +605,15 @@
     --marker-line-height: 1.25;
   }
 
-  .artifact-marker.active .marker-content-inner.has-text {
+  .artifact-marker.active .marker-content-inner.text-only {
     justify-content: center;
     text-align: center;
+    white-space: normal;
+  }
+
+  .artifact-marker.active .marker-content-inner.image-with-text .marker-text {
+    padding: 8px 16px 10px;
+    line-height: 1.2;
     white-space: normal;
   }
 
@@ -589,7 +633,7 @@
   .artifact-marker:hover .marker-ring,
   .artifact-marker:focus .marker-ring,
   .artifact-marker.active .marker-ring {
-    stroke-width: 2.75;
+    stroke-width: 2;
   }
 
 </style>
