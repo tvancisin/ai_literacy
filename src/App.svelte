@@ -9,95 +9,134 @@
   } from "d3";
   import { scale } from "svelte/transition";
 
+  // url handling
+  const baseUrl = import.meta.env.BASE_URL;
+  function assetUrl(path) {
+    return `${baseUrl}${path.replace(/^\//, "")}`;
+  }
+
+  // data
   let isLoading = true;
   let loadError = null;
-
   let progress = { sessions: [], participants: [] };
   $: sessions = progress.sessions ?? [];
   $: participants = progress.participants ?? [];
-  const baseUrl = import.meta.env.BASE_URL;
 
+  // layout
   let height = 400;
   let width = 400;
   $: margin = {
     top: 80,
     right: 50,
-    bottom: 20,
-    left: 80,
+    bottom: 40,
+    left: 50,
   };
 
-  $: laneStart = margin.left;
-  $: laneEnd = width - margin.right;
   $: sessionScale = scalePoint()
     .domain(sessions.map((session) => session.id))
-    .range([laneStart, laneEnd])
-    .padding(0.25);
+    .range([margin.left * 2, width - margin.right])
+    .padding(0.35);
   $: participantScale = scalePoint()
     .domain(participants.map((participant) => participant.id))
     .range([margin.top, height - margin.bottom])
     .padding(0.35);
+  $: laneStart = margin.left;
+  $: laneEnd = width - margin.right;
 
-  const markerRadius = 6;
-  const collisionRadius = 8;
+  // grouped circle packing
+  const minMarkerRadius = 10;
+  const maxMarkerRadius = 35;
+  const collisionPadding = 2;
 
-  function initialOffset(index, count) {
-    if (count === 1) {
-      return { x: 0, y: 0 };
+  function stableRadius(id) {
+    let hash = 0;
+
+    for (const character of id) {
+      hash = (hash * 31 + character.charCodeAt(0)) % 100000;
     }
 
-    const angle = (index * 137.5 * Math.PI) / 180;
-    const distance = 5 + index * 2;
-
-    return {
-      x: Math.cos(angle) * distance,
-      y: Math.sin(angle) * distance,
-    };
+    return minMarkerRadius + (hash % (maxMarkerRadius - minMarkerRadius + 1));
   }
 
-  function layoutLocalBeeswarm(sessionArtifacts) {
-    const nodes = sessionArtifacts.map((artifact, index) => {
-      const offset = initialOffset(index, sessionArtifacts.length);
-
-      return {
-        artifact,
-        x: offset.x,
-        y: offset.y,
-      };
-    });
-
-    forceSimulation(nodes)
-      .force("x", forceX(0).strength(0.1))
-      .force("y", forceY(0).strength(0.85))
-      .force("collide", forceCollide(collisionRadius))
-      .stop()
-      .tick(48);
-
-    return nodes;
-  }
-
-  $: artifacts = participants.flatMap((participant) =>
+  $: rawArtifacts = participants.flatMap((participant) =>
     sessions.flatMap((session) => {
       const sessionArtifacts = participant.sessions?.[session.id] ?? [];
-      const baseX = sessionScale(session.id);
-      const baseY = participantScale(participant.id);
-      const groupId = `${participant.id}-${session.id}`;
 
-      if (!sessionArtifacts.length || baseX == null || baseY == null) {
-        return [];
-      }
-
-      return layoutLocalBeeswarm(sessionArtifacts).map((node) => ({
-        id: node.artifact.id,
-        groupId,
+      return sessionArtifacts.map((artifact, index) => ({
+        id: artifact.id,
+        groupId: session.id,
         participant,
         session,
-        artifact: node.artifact,
-        x: baseX + node.x,
-        y: baseY + node.y,
+        artifact,
+        artifactIndex: index,
+        radius: stableRadius(artifact.id),
       }));
     }),
   );
 
+  function layoutSessionColumns(nodes) {
+    const top = margin.top + maxMarkerRadius;
+    const bottom = height - margin.bottom - maxMarkerRadius;
+    const centerY = (top + bottom) / 2;
+    const positioned = nodes
+      .map((node, index) => {
+        const targetX = sessionScale(node.session.id);
+        const angle = ((index * 137.5) % 360) * (Math.PI / 180);
+        const radius = 24 + (index % 24) * 3;
+
+        return {
+          ...node,
+          targetX,
+          x: targetX + Math.cos(angle) * radius,
+          y: centerY + Math.sin(angle) * radius,
+        };
+      })
+      .filter((node) => node.targetX != null);
+
+    forceSimulation(positioned)
+      .alpha(1)
+      .alphaDecay(0.018)
+      .velocityDecay(0.42)
+      .force("x", forceX((node) => node.targetX).strength(0.2))
+      .force("y", forceY(centerY).strength(0.035))
+      .force(
+        "collide",
+        forceCollide((node) => node.radius + collisionPadding)
+          .strength(1)
+          .iterations(8),
+      )
+      .stop()
+      .tick(360);
+
+    return positioned.map((node) => ({
+      ...node,
+      x: Math.max(node.radius, Math.min(width - node.radius, node.x)),
+      y: Math.max(top, Math.min(bottom, node.y)),
+    }));
+  }
+
+  // positioning of the circles
+  $: artifacts =
+    rawArtifacts.length && width > 0 && height > 0
+      ? layoutSessionColumns(rawArtifacts)
+      : [];
+
+  $: sessionColumns = sessions
+    .map((session) => {
+      const x = sessionScale(session.id);
+      const count = artifacts.filter(
+        (artifact) => artifact.session.id === session.id,
+      ).length;
+
+      return {
+        session,
+        x,
+        count,
+      };
+    })
+    .filter((column) => column.x != null);
+
+  // artifact panel
   let activeArtifactId = null;
   let isPanelExpanded = false;
   $: activeArtifact =
@@ -110,9 +149,9 @@
   $: panelLeft = activeArtifact
     ? isPanelExpanded
       ? (width - expandedPanelWidth) / 2
-      : isLastSessionArtifact
-      ? Math.max(16, activeArtifact.x - panelWidth - 18)
-      : Math.min(activeArtifact.x + 18, width - panelWidth - 16)
+      : activeArtifact.x > width / 2
+        ? Math.max(16, activeArtifact.x - panelWidth - 18)
+        : Math.min(activeArtifact.x + 18, width - panelWidth - 16)
     : 0;
   $: panelTop = activeArtifact
     ? isPanelExpanded
@@ -123,6 +162,7 @@
     ? `left: ${panelLeft}px; top: ${panelTop}px; width: ${expandedPanelWidth}px; height: ${expandedPanelHeight}px;`
     : `left: ${panelLeft}px; top: ${panelTop}px; width: ${panelWidth}px;`;
 
+  // interactions 
   function showArtifact(id) {
     activeArtifactId = id;
     isPanelExpanded = false;
@@ -159,10 +199,6 @@
     }
   }
 
-  function assetUrl(path) {
-    return `${baseUrl}${path.replace(/^\//, "")}`;
-  }
-
   onMount(() => {
     document.addEventListener("click", handleDocumentClick);
 
@@ -193,25 +229,33 @@
   <svg {width} {height}>
     <rect class="chart-background" {width} {height} />
 
-    <!-- sessions vertical indicators -->
+    <!-- session columns -->
     <g class="session-guides" aria-hidden="true">
-      {#each sessions as session}
+      {#each sessionColumns as column}
         <line
-          x1={sessionScale(session.id)}
-          x2={sessionScale(session.id)}
+          x1={column.x}
+          x2={column.x}
           y1={margin.top - 30}
           y2={height - margin.bottom}
         />
-        <text x={sessionScale(session.id)} y={38} text-anchor="middle">
-          {session.label}
+        <text x={column.x} y={38} text-anchor="middle">
+          {column.session.label}
         </text>
         <text
           class="session-topic"
-          x={sessionScale(session.id)}
+          x={column.x}
           y={58}
           text-anchor="middle"
         >
-          {session.topic}
+          {column.session.topic}
+        </text>
+        <text
+          class="session-count"
+          x={column.x}
+          y={height - 14}
+          text-anchor="middle"
+        >
+          {column.count} artifacts
         </text>
       {/each}
     </g>
@@ -230,11 +274,12 @@
             height="24"
             aria-label={participant.name}
           />
-          <path class="lane-path" d={`M ${laneStart} ${y} H ${laneEnd}`} />
+          <!-- <path class="lane-path" d={`M ${laneStart} ${y} H ${laneEnd}`} /> -->
         </g>
       {/each}
     </g>
 
+    <!-- individual artifacts/circles -->
     <g class="artifact-markers">
       {#each artifacts as artifact (artifact.id)}
         <g
@@ -253,7 +298,11 @@
           onkeydown={(event) => handleMarkerKeydown(event, artifact.id)}
         >
           <title>{artifact.participant.name}, {artifact.session.label}</title>
-          <circle class="marker-ring" r={markerRadius} />
+          <circle
+            class="marker-ring"
+            r={artifact.radius}
+            style={`--active-radius: ${artifact.radius + 4}px;`}
+          />
           <!-- <circle class="marker-dot" r="4.5" /> -->
         </g>
       {/each}
@@ -270,7 +319,9 @@
       <button
         class="panel-expand"
         type="button"
-        aria-label={isPanelExpanded ? "Shrink artifact details" : "Expand artifact details"}
+        aria-label={isPanelExpanded
+          ? "Shrink artifact details"
+          : "Expand artifact details"}
         aria-pressed={isPanelExpanded}
         onclick={togglePanelExpanded}
       >
@@ -337,15 +388,14 @@
     font-weight: 500;
   }
 
-  .participant-icon {
-    opacity: 0.82;
+  .session-guides .session-count {
+    fill: #8a9398;
+    font-size: 11px;
+    font-weight: 600;
   }
 
-  .lane-path {
-    fill: none;
-    stroke: #c7cec8;
-    stroke-linecap: round;
-    stroke-width: 2;
+  .participant-icon {
+    opacity: 0.82;
   }
 
   .artifact-marker {
@@ -384,7 +434,7 @@
   .artifact-marker:hover .marker-ring,
   .artifact-marker:focus .marker-ring,
   .artifact-marker.active .marker-ring {
-    r: 8.5;
+    r: var(--active-radius);
     stroke-width: 2.75;
   }
 
