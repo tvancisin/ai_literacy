@@ -30,28 +30,28 @@
           {
             "id": "p01-session-1-a1",
             "text": "Is AI dangerous?",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p01-session-2-a1",
-            "text": "Compared prompt versions and kept the clearest structure.",
-            "image": "/img/session-2.svg"
+            "text": "The words machine learning and program/programming are used interchangeably, what are the differences?",
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p01-session-3-a1",
             "text": "Built a checklist for judging answer quality.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p01-session-4-a1",
             "text": "Presented a workflow change with review steps.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -64,28 +64,28 @@
           {
             "id": "p02-session-1-a1",
             "text": "I heard that the brain is the hardware and the mind is software, what do you think?",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p02-session-2-a1",
-            "text": "Tested prompt constraints for shorter responses.",
-            "image": "/img/session-2.svg"
+            "text": "I have started to evaluate the answers from the AI a bit more now since the course. I have been asking it questions.",
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p02-session-3-a1",
             "text": "Checked generated claims against source material.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p02-session-4-a1",
             "text": "Shared when not to use AI for a sensitive task.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -98,28 +98,28 @@
           {
             "id": "p03-session-1-a1",
             "text": "Sketched how generative AI tools produce responses.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p03-session-2-a1",
-            "text": "Created a reusable prompt template for summaries.",
-            "image": "/img/session-2.svg"
+            "text": "I have heard about Data Centres, but what are they doing?",
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p03-session-3-a1",
             "text": "Flagged missing evidence in an AI answer.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p03-session-4-a1",
             "text": "Summarised one improved learning workflow.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -132,28 +132,28 @@
           {
             "id": "p04-session-1-a1",
             "text": "I’m an artist and AI companies have stolen creative works, there is no clear regulations for AI, and a monopoly from companies.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p04-session-2-a1",
-            "text": "Refined a prompt with role and format details.",
-            "image": "/img/session-2.svg"
+            "text": "Only 2.5% of the water on Earth is fresh. Can we use Ocean Water to cool the data centres?",
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p04-session-3-a1",
             "text": "Compared AI output with a trusted reference.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p04-session-4-a1",
             "text": "Finished with a low-risk AI usage guide.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -166,28 +166,28 @@
           {
             "id": "p05-session-1-a1",
             "text": "AI is being used in drones to commit harm in other countries, using bombs on people.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p05-session-2-a1",
             "text": "Added role, audience, format, and constraints.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p05-session-3-a1",
             "text": "Separated useful material from unsupported claims.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p05-session-4-a1",
             "text": "Designed a repeatable review step.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -200,28 +200,28 @@
           {
             "id": "p06-session-1-a1",
             "text": "I have heard about AI that can allow people to chat with their dead family members.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p06-session-2-a1",
-            "text": "Joined through prompt iteration and peer comparison.",
-            "image": "/img/session-2.svg"
+            "text": "What do the companies have to gain from pushing AI. I understand the limitations of LLMs but people like Peter Thiel are suggesting it can replace people, is it just for money?",
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p06-session-3-a1",
             "text": "Tested outputs against sources and noted uncertainty.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p06-session-4-a1",
             "text": "Created an action plan for one recurring workflow.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -234,28 +234,28 @@
           {
             "id": "p07-session-1-a1",
             "text": "I have heard about what AI does to the environment and that makes me very sad and worried.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p07-session-2-a1",
-            "text": "Added examples and success criteria to a prompt.",
-            "image": "/img/session-2.svg"
+            "text": "I can see kids glued to their phones already, increase in mental health problems, and AI added to that will make things worse.",
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p07-session-3-a1",
             "text": "",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p07-session-4-a1",
             "text": "Shared a reflection on confidence and limits.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -268,28 +268,28 @@
           {
             "id": "p08-session-1-a1",
             "text": "I had a go at AI right before this course to prepare, and the conversation works well. It feels like talking to a person. Sometimes it says ‘thinking’.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p08-session-2-a1",
             "text": "Tested a prompt for summarising class material.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p08-session-3-a1",
             "text": "Scored clarity, usefulness, accuracy, and context.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p08-session-4-a1",
             "text": "Turned the rubric into a future checklist.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -302,28 +302,28 @@
           {
             "id": "p09-session-1-a1",
             "text": "I am quite apprehensive. I am only just playing catchup with computers after a long time.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p09-session-2-a1",
             "text": "Made responses more specific to a learner audience.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p09-session-3-a1",
             "text": "Selected the answer with clearer reasoning.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p09-session-4-a1",
             "text": "Created a concise usage reflection.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -336,28 +336,28 @@
           {
             "id": "p10-session-1-a1",
             "text": "Logged baseline confidence and chose one workflow.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p10-session-2-a1",
             "text": "Separated source facts from generated suggestions.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p10-session-3-a1",
             "text": "Rewrote unsupported statements as verification questions.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p10-session-4-a1",
             "text": "Completed a before-and-after workflow comparison.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -370,28 +370,28 @@
           {
             "id": "p11-session-1-a1",
             "text": "Named a communication task suitable for practice.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p11-session-2-a1",
             "text": "Matched tone and format to a specific audience.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p11-session-3-a1",
             "text": "Added verification notes before using generated text.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p11-session-4-a1",
             "text": "Summarised personal boundaries for AI use.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -404,28 +404,28 @@
           {
             "id": "p12-session-1-a1",
             "text": "Outlined a use case and risks to manage.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p12-session-2-a1",
             "text": "Moved from a broad prompt to a focused format.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p12-session-3-a1",
             "text": "Checked one answer against module notes.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p12-session-4-a1",
             "text": "Shared a scenario with review points before action.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -438,28 +438,28 @@
           {
             "id": "p13-session-1-a1",
             "text": "Mapped familiar AI tools in learning contexts.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p13-session-2-a1",
             "text": "Built a prompt for comparing options.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p13-session-3-a1",
             "text": "Used peer feedback to improve evaluation criteria.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p13-session-4-a1",
             "text": "Presented clear human review responsibilities.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -472,28 +472,28 @@
           {
             "id": "p14-session-1-a1",
             "text": "Recorded questions about transparency and sources.",
-            "image": "/img/session-1.svg"
+            "image": ""
           }
         ],
         "session-2": [
           {
             "id": "p14-session-2-a1",
             "text": "Practised asking for assumptions and limits.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p14-session-3-a1",
             "text": "Checked generated claims against class materials.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p14-session-4-a1",
             "text": "Summarised what must be verified before reuse.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
@@ -505,29 +505,29 @@
         "session-1": [
           {
             "id": "p15-session-1-a1",
-            "text": "Named one high-value, low-risk task.",
-            "image": "/img/session-1.svg"
+            "text": "Neuron Network",
+            "image": "/img/neurons.jpg"
           }
         ],
         "session-2": [
           {
             "id": "p15-session-2-a1",
             "text": "Added examples of useful and unhelpful responses.",
-            "image": "/img/session-2.svg"
+            "image": ""
           }
         ],
         "session-3": [
           {
             "id": "p15-session-3-a1",
             "text": "Created a verification habit for important claims.",
-            "image": "/img/session-3.svg"
+            "image": ""
           }
         ],
         "session-4": [
           {
             "id": "p15-session-4-a1",
             "text": "Closed with a guide for asking, verifying, and stopping.",
-            "image": "/img/session-4.svg"
+            "image": ""
           }
         ]
       }
