@@ -45,10 +45,11 @@
   // grouped circle packing
   const minMarkerRadius = 20;
   const maxMarkerRadius = 70;
+  const expandedMarkerRadius = 150;
   const collisionPadding = 2;
   const packingStrength = 1;
   const packingIterations = 10;
-  const sessionColumnStrength = 0.1;
+  const sessionColumnStrength = 0.2;
   const verticalCenterStrength = 0.012;
   let markerSimulation = null;
   let activeArtifactId = null;
@@ -67,19 +68,6 @@
     return Math.max(7, Math.min(12, radius * 0.42));
   }
 
-  function activeMarkerRadius(artifact) {
-    if (!artifact.hasText) {
-      return Math.max(artifact.radius * 2.2, 78);
-    }
-
-    const textLength = artifact.text.length;
-
-    return Math.max(
-      artifact.radius * 2.2,
-      Math.min(150, 72 + textLength * 0.45),
-    );
-  }
-
   $: rawArtifacts = participants.flatMap((participant) =>
     sessions.flatMap((session) => {
       const sessionArtifacts = participant.sessions?.[session.id] ?? [];
@@ -90,11 +78,7 @@
         const image = artifact.image?.trim() ?? "";
         const hasText = text.length > 0;
         const hasImage = image.length > 0;
-        const expandedRadius = activeMarkerRadius({
-          radius,
-          text,
-          hasText,
-        });
+        const expandedRadius = expandedMarkerRadius;
 
         return {
           id: artifact.id,
@@ -331,7 +315,7 @@
   bind:clientHeight={height}
   style={`--background-image: url(${assetUrl("img/bg_hr.jpg")});`}
 >
-  <h1 class="visually-hidden">AI Literacy Challenge</h1>
+  <h1>AI Literacy Challenge</h1>
   <img class="efi_logo" src={assetUrl("efi_logo.png")} alt="EFI logo" />
   <img
     class="grassmarket_logo"
@@ -462,8 +446,8 @@
     z-index: 0;
   }
 
-  .visually-hidden {
-    font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  h1 {
+    font-family: Montserrat, sans-serif;
     position: absolute;
     top: 20px;
     left: 50%;
@@ -497,14 +481,7 @@
 
   svg {
     display: block;
-    font-family:
-      Montserrat,
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      BlinkMacSystemFont,
-      "Segoe UI",
-      sans-serif;
+    font-family: Montserrat, sans-serif;
   }
 
   .chart-background {
@@ -529,10 +506,6 @@
     font-weight: 600;
   }
 
-  .participant-icon {
-    opacity: 0.82;
-  }
-
   .artifact-marker {
     color: #000000;
     cursor: pointer;
@@ -553,12 +526,13 @@
     transform: scale(var(--marker-scale));
     transform-box: view-box;
     transform-origin: 0 0;
-    transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 520ms cubic-bezier(0.2, 0, 0.13, 1);
+    will-change: transform;
   }
 
   .marker-fill {
     fill: #fcfbfb;
-    filter: drop-shadow(0 2px 5px rgba(38, 50, 56, 0.521));
+    filter: drop-shadow(0 2.5px 8px rgba(13, 17, 19, 0.721));
     pointer-events: visiblePainted;
   }
 
@@ -594,9 +568,9 @@
     -webkit-tap-highlight-color: transparent;
     white-space: nowrap;
     transition:
-      font-size 180ms ease,
-      line-height 180ms ease,
-      padding 180ms ease;
+      font-size 360ms ease,
+      line-height 360ms ease,
+      padding 360ms ease;
   }
 
   .marker-content-inner.text-only {
@@ -658,13 +632,8 @@
     stroke: currentColor;
     stroke-width: 0;
     pointer-events: none;
-    transition: stroke-width 140ms ease;
+    transition: stroke-width 220ms ease;
   }
-
-  /* .marker-dot {
-    fill: currentColor;
-    pointer-events: none;
-  } */
 
   .artifact-marker:hover .marker-ring,
   .artifact-marker:focus .marker-ring,
