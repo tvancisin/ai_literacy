@@ -368,25 +368,6 @@
       {/each}
     </g>
 
-    <!-- horizontal participant lines -->
-    <!-- <g class="participant-lanes">
-      {#each participants as participant}
-        {@const y = participantScale(participant.id)}
-        <g>
-          <image
-            class="participant-icon"
-            href={assetUrl("img/person.svg")}
-            x={margin.left - 42}
-            y={y - 12}
-            width="24"
-            height="24"
-            aria-label={participant.name}
-          />
-          <path class="lane-path" d={`M ${laneStart} ${y} H ${laneEnd}`} />
-        </g>
-      {/each}
-    </g> -->
-
     <!-- individual artifacts/circles -->
     <g class="artifact-markers">
       {#each visibleArtifacts as artifact (artifact.id)}
