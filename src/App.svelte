@@ -43,9 +43,11 @@
   $: laneEnd = width - margin.right;
 
   // grouped circle packing
-  const minMarkerRadius = 20;
-  const maxMarkerRadius = 70;
+  const minMarkerRadius = 25;
+  const maxMarkerRadius = 65;
   const expandedMarkerRadius = 150;
+  const markerIconSize = 15;
+  const markerIconInset = 2;
   const collisionPadding = 2;
   const packingStrength = 1;
   const packingIterations = 10;
@@ -68,6 +70,18 @@
     return Math.max(7, Math.min(12, radius * 0.42));
   }
 
+  function markerIconForText(text) {
+    if (text.endsWith("?")) {
+      return "question.svg";
+    }
+
+    if (text.endsWith(".")) {
+      return "comment.svg";
+    }
+
+    return null;
+  }
+
   $: rawArtifacts = participants.flatMap((participant) =>
     sessions.flatMap((session) => {
       const sessionArtifacts = participant.sessions?.[session.id] ?? [];
@@ -79,6 +93,7 @@
         const hasText = text.length > 0;
         const hasImage = image.length > 0;
         const expandedRadius = expandedMarkerRadius;
+        const markerIcon = hasImage ? null : markerIconForText(text);
 
         return {
           id: artifact.id,
@@ -92,6 +107,7 @@
           hasText,
           hasImage,
           expandedRadius,
+          markerIcon,
           markerTextSize: markerTextSize(radius),
           markerScale: radius / expandedRadius,
         };
@@ -316,7 +332,7 @@
   style={`--background-image: url(${assetUrl("img/bg_hr.jpg")});`}
 >
   <h1>AI Literacy Challenge</h1>
-  <img class="efi_logo" src={assetUrl("efi_logo.png")} alt="EFI logo" />
+  <img class="efi_logo" src={assetUrl("efi_phoenix.png")} alt="EFI logo" />
   <img
     class="grassmarket_logo"
     src={assetUrl("grassmarket_logo_nobg.png")}
@@ -382,7 +398,7 @@
           tabindex="0"
           aria-label={`${artifact.participant.name}, ${artifact.session.label}${artifact.hasText ? `: ${artifact.text}` : ""}`}
           transform={`translate(${artifact.x} ${artifact.y})`}
-          style={`--marker-scale: ${isActive ? 1 : artifact.markerScale}; --content-size: ${(artifact.expandedRadius - 1) * 2}px; --content-offset: ${-artifact.expandedRadius + 1}px; --marker-font-size: ${isActive ? 11 : artifact.markerTextSize / artifact.markerScale}px;`}
+          style={`--marker-scale: ${isActive ? 1 : artifact.markerScale}; --marker-icon-y: ${-(isActive ? artifact.expandedRadius : artifact.radius) + markerIconInset}px; --content-size: ${(artifact.expandedRadius - 1) * 2}px; --content-offset: ${-artifact.expandedRadius + 1}px; --marker-font-size: ${isActive ? 11 : artifact.markerTextSize / artifact.markerScale}px;`}
           onclick={(event) => {
             event.stopPropagation();
             showArtifact(artifact.id);
@@ -417,6 +433,19 @@
             </foreignObject>
             <circle class="marker-ring" r={artifact.expandedRadius} />
           </g>
+          <!-- comment or question mark -->
+          {#if artifact.markerIcon}
+            <g class="marker-icon-anchor" aria-hidden="true">
+              <image
+                class="marker-icon"
+                href={assetUrl(artifact.markerIcon)}
+                x={-markerIconSize / 2}
+                y="0"
+                width={markerIconSize}
+                height={markerIconSize}
+              />
+            </g>
+          {/if}
           <!-- <circle class="marker-dot" r="4.5" /> -->
         </g>
       {/each}
@@ -465,7 +494,7 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 300px;
+    width: 500px;
     height: auto;
     z-index: 3;
   }
@@ -513,6 +542,7 @@
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     --marker-scale: 1;
+    --marker-icon-y: 0;
     --marker-font-size: 8px;
     --marker-padding: 0 4px;
     --marker-line-height: 1;
@@ -537,6 +567,19 @@
   }
 
   .marker-content {
+    pointer-events: none;
+  }
+
+  .marker-icon-anchor {
+    pointer-events: none;
+    transform: translateY(var(--marker-icon-y));
+    transition: transform 520ms cubic-bezier(0.2, 0, 0.13, 1);
+    will-change: transform;
+  }
+
+  .marker-icon {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.9));
+    opacity: 0.86;
     pointer-events: none;
   }
 
