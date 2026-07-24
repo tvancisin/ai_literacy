@@ -97,8 +97,8 @@
         "session-1": [
           {
             "id": "p03-session-1-a1",
-            "text": "Sketched how generative AI tools produce responses.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_somya.jpg"
           }
         ],
         "session-2": [
@@ -201,6 +201,11 @@
             "id": "p06-session-1-a1",
             "text": "I have heard about AI that can allow people to chat with their dead family members.",
             "image": ""
+          },
+          {
+            "id": "p06-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_group.jpg"
           }
         ],
         "session-2": [
@@ -235,6 +240,11 @@
             "id": "p07-session-1-a1",
             "text": "I have heard about what AI does to the environment and that makes me very sad and worried.",
             "image": ""
+          },
+          {
+            "id": "p07-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_group_1.jpg"
           }
         ],
         "session-2": [
@@ -335,8 +345,8 @@
         "session-1": [
           {
             "id": "p10-session-1-a1",
-            "text": "Logged baseline confidence and chose one workflow.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_couple.jpg"
           }
         ],
         "session-2": [
@@ -369,8 +379,8 @@
         "session-1": [
           {
             "id": "p11-session-1-a1",
-            "text": "Named a communication task suitable for practice.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_solution.png"
           }
         ],
         "session-2": [
@@ -403,8 +413,8 @@
         "session-1": [
           {
             "id": "p12-session-1-a1",
-            "text": "Outlined a use case and risks to manage.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_participant.jpg"
           }
         ],
         "session-2": [
@@ -437,8 +447,8 @@
         "session-1": [
           {
             "id": "p13-session-1-a1",
-            "text": "Mapped familiar AI tools in learning contexts.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_table_1.jpg"
           }
         ],
         "session-2": [
@@ -472,7 +482,7 @@
           {
             "id": "p14-session-1-a1",
             "text": "Interdisciplinarity",
-             "image": "/img/onion.png"
+            "image": "/img/s1/s1_challenge.png"
           }
         ],
         "session-2": [
@@ -506,7 +516,12 @@
           {
             "id": "p15-session-1-a1",
             "text": "Neuron Network",
-            "image": "/img/neurons.jpg"
+            "image": "/img/s1/neurons.jpg"
+          },
+          {
+            "id": "p15-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_table_group.jpg"
           }
         ],
         "session-2": [
