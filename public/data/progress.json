@@ -36,6 +36,11 @@
         "session-2": [
           {
             "id": "p01-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_botty.jpg"
+          },
+          {
+            "id": "p01-session-2-a2",
             "text": "The words machine learning and program/programming are used interchangeably, what are the differences?",
             "image": ""
           }
@@ -97,8 +102,8 @@
         "session-1": [
           {
             "id": "p03-session-1-a1",
-            "text": "Sketched how generative AI tools produce responses.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_somya.jpg"
           }
         ],
         "session-2": [
@@ -172,8 +177,8 @@
         "session-2": [
           {
             "id": "p05-session-2-a1",
-            "text": "Added role, audience, format, and constraints.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_pen_paper.jpg"
           }
         ],
         "session-3": [
@@ -201,6 +206,11 @@
             "id": "p06-session-1-a1",
             "text": "I have heard about AI that can allow people to chat with their dead family members.",
             "image": ""
+          },
+          {
+            "id": "p06-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_group.jpg"
           }
         ],
         "session-2": [
@@ -235,6 +245,11 @@
             "id": "p07-session-1-a1",
             "text": "I have heard about what AI does to the environment and that makes me very sad and worried.",
             "image": ""
+          },
+          {
+            "id": "p07-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_group_1.jpg"
           }
         ],
         "session-2": [
@@ -274,8 +289,8 @@
         "session-2": [
           {
             "id": "p08-session-2-a1",
-            "text": "Tested a prompt for summarising class material.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_table_ppl.jpg"
           }
         ],
         "session-3": [
@@ -308,8 +323,8 @@
         "session-2": [
           {
             "id": "p09-session-2-a1",
-            "text": "Made responses more specific to a learner audience.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_somya.jpg"
           }
         ],
         "session-3": [
@@ -335,15 +350,15 @@
         "session-1": [
           {
             "id": "p10-session-1-a1",
-            "text": "Logged baseline confidence and chose one workflow.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_couple.jpg"
           }
         ],
         "session-2": [
           {
             "id": "p10-session-2-a1",
-            "text": "Separated source facts from generated suggestions.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_solution.jpg"
           }
         ],
         "session-3": [
@@ -369,15 +384,15 @@
         "session-1": [
           {
             "id": "p11-session-1-a1",
-            "text": "Named a communication task suitable for practice.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_solution.png"
           }
         ],
         "session-2": [
           {
             "id": "p11-session-2-a1",
-            "text": "Matched tone and format to a specific audience.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_phone.jpg"
           }
         ],
         "session-3": [
@@ -403,15 +418,20 @@
         "session-1": [
           {
             "id": "p12-session-1-a1",
-            "text": "Outlined a use case and risks to manage.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_participant.jpg"
+          },
+          {
+            "id": "p12-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_participant_2.jpg"
           }
         ],
         "session-2": [
           {
             "id": "p12-session-2-a1",
-            "text": "Moved from a broad prompt to a focused format.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_participant.jpg"
           }
         ],
         "session-3": [
@@ -437,15 +457,15 @@
         "session-1": [
           {
             "id": "p13-session-1-a1",
-            "text": "Mapped familiar AI tools in learning contexts.",
-            "image": ""
+            "text": "",
+            "image": "/img/s1/s1_table_1.jpg"
           }
         ],
         "session-2": [
           {
             "id": "p13-session-2-a1",
-            "text": "Built a prompt for comparing options.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_participant_2.jpg"
           }
         ],
         "session-3": [
@@ -472,14 +492,14 @@
           {
             "id": "p14-session-1-a1",
             "text": "Interdisciplinarity",
-             "image": "/img/onion.png"
+            "image": "/img/s1/onion.png"
           }
         ],
         "session-2": [
           {
             "id": "p14-session-2-a1",
-            "text": "Practised asking for assumptions and limits.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_group.jpg"
           }
         ],
         "session-3": [
@@ -506,14 +526,19 @@
           {
             "id": "p15-session-1-a1",
             "text": "Neuron Network",
-            "image": "/img/neurons.jpg"
+            "image": "/img/s1/neurons.jpg"
+          },
+          {
+            "id": "p15-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_table_group.jpg"
           }
         ],
         "session-2": [
           {
             "id": "p15-session-2-a1",
-            "text": "Added examples of useful and unhelpful responses.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_computer.jpg"
           }
         ],
         "session-3": [
