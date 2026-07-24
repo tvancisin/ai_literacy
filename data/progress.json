@@ -48,7 +48,7 @@
         "session-3": [
           {
             "id": "p01-session-3-a1",
-            "text": "Built a checklist for judging answer quality.",
+            "text": "I'm more worried about data, like where does it go, where is it kept?",
             "image": ""
           }
         ],
@@ -82,7 +82,7 @@
         "session-3": [
           {
             "id": "p02-session-3-a1",
-            "text": "Checked generated claims against source material.",
+            "text": "I read about the agent which escaped and saw both Hugging Face and Open AI leaders talk about it, they used the words unprecedented which gives the idea that this a special thing, that the agent acted on its own. It was very interesting how they talked about it",
             "image": ""
           }
         ],
@@ -116,7 +116,7 @@
         "session-3": [
           {
             "id": "p03-session-3-a1",
-            "text": "Flagged missing evidence in an AI answer.",
+            "text": "There is a petition right now about the data centre planned in Gyle, we could push for them not to open in our areas, but then they would just build it somewhere else. Is there any point in the petitions or challenging this?",
             "image": ""
           }
         ],
@@ -150,7 +150,7 @@
         "session-3": [
           {
             "id": "p04-session-3-a1",
-            "text": "Compared AI output with a trusted reference.",
+            "text": "There was a robot which ran out of battery and got stuck in the road, it has been in the news",
             "image": ""
           }
         ],
@@ -184,7 +184,7 @@
         "session-3": [
           {
             "id": "p05-session-3-a1",
-            "text": "Separated useful material from unsupported claims.",
+            "text": "I asked the chatbot how to use it, and it told me to give it a role, like acting as a language teacher",
             "image": ""
           }
         ],
@@ -223,7 +223,7 @@
         "session-3": [
           {
             "id": "p06-session-3-a1",
-            "text": "Tested outputs against sources and noted uncertainty.",
+            "text": "All of this is worrying, with all the data centres going up for AI, are you not worried about the push for AI?",
             "image": ""
           }
         ],
@@ -262,7 +262,7 @@
         "session-3": [
           {
             "id": "p07-session-3-a1",
-            "text": "",
+            "text": "The AI has been very polite and friendly, I had a lovely conversation with it.",
             "image": ""
           }
         ],
@@ -296,7 +296,7 @@
         "session-3": [
           {
             "id": "p08-session-3-a1",
-            "text": "Scored clarity, usefulness, accuracy, and context.",
+            "text": "I have been using chatgpt for pictures.",
             "image": ""
           }
         ],
@@ -337,7 +337,7 @@
         "session-4": [
           {
             "id": "p09-session-4-a1",
-            "text": "Created a concise usage reflection.",
+            "text": "It said it cannot think.",
             "image": ""
           }
         ]
@@ -489,11 +489,6 @@
       "name": "Participant 14",
       "sessions": {
         "session-1": [
-          {
-            "id": "p14-session-1-a1",
-            "text": "Interdisciplinarity",
-            "image": "/img/s1/onion.png"
-          }
         ],
         "session-2": [
           {
