@@ -36,6 +36,11 @@
         "session-2": [
           {
             "id": "p01-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_botty.jpg"
+          },
+          {
+            "id": "p01-session-2-a2",
             "text": "The words machine learning and program/programming are used interchangeably, what are the differences?",
             "image": ""
           }
@@ -172,8 +177,8 @@
         "session-2": [
           {
             "id": "p05-session-2-a1",
-            "text": "Added role, audience, format, and constraints.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_pen_paper.jpg"
           }
         ],
         "session-3": [
@@ -284,8 +289,8 @@
         "session-2": [
           {
             "id": "p08-session-2-a1",
-            "text": "Tested a prompt for summarising class material.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_table_ppl.jpg"
           }
         ],
         "session-3": [
@@ -318,8 +323,8 @@
         "session-2": [
           {
             "id": "p09-session-2-a1",
-            "text": "Made responses more specific to a learner audience.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_somya.jpg"
           }
         ],
         "session-3": [
@@ -352,8 +357,8 @@
         "session-2": [
           {
             "id": "p10-session-2-a1",
-            "text": "Separated source facts from generated suggestions.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_solution.jpg"
           }
         ],
         "session-3": [
@@ -386,8 +391,8 @@
         "session-2": [
           {
             "id": "p11-session-2-a1",
-            "text": "Matched tone and format to a specific audience.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_phone.jpg"
           }
         ],
         "session-3": [
@@ -415,13 +420,18 @@
             "id": "p12-session-1-a1",
             "text": "",
             "image": "/img/s1/s1_participant.jpg"
+          },
+          {
+            "id": "p12-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_participant_2.jpg"
           }
         ],
         "session-2": [
           {
             "id": "p12-session-2-a1",
-            "text": "Moved from a broad prompt to a focused format.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_participant.jpg"
           }
         ],
         "session-3": [
@@ -454,8 +464,8 @@
         "session-2": [
           {
             "id": "p13-session-2-a1",
-            "text": "Built a prompt for comparing options.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_participant_2.jpg"
           }
         ],
         "session-3": [
@@ -482,14 +492,14 @@
           {
             "id": "p14-session-1-a1",
             "text": "Interdisciplinarity",
-            "image": "/img/s1/s1_challenge.png"
+            "image": "/img/s1/onion.png"
           }
         ],
         "session-2": [
           {
             "id": "p14-session-2-a1",
-            "text": "Practised asking for assumptions and limits.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_group.jpg"
           }
         ],
         "session-3": [
@@ -527,8 +537,8 @@
         "session-2": [
           {
             "id": "p15-session-2-a1",
-            "text": "Added examples of useful and unhelpful responses.",
-            "image": ""
+            "text": "",
+            "image": "/img/s2/s2_computer.jpg"
           }
         ],
         "session-3": [
