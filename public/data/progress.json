@@ -139,7 +139,7 @@
             "image": "/img/s4/s4_personal_project_value_SashaSabenCallaghan_copyright.png"
           },
           {
-            "id": "p01-session-4-a19",
+            "id": "p01-session-4-a20",
             "text": "Personal project - artist: Sasha Saben Callaghan.",
             "image": "/img/s4/s4_personal_project_work_SashaSabenCallaghan_copyright.png"
           }
@@ -174,9 +174,25 @@
         "session-4": [
           {
             "id": "p02-session-4-a1",
-            "text": "Shared when not to use AI for a sensitive task.",
-            "image": ""
+            "text": "Group Mini-Challenge - Fiddles: Process (Tinderbox Collective project)",
+            "image": "/img/s4/s4_challengeprocess_1.jpg"
+          },
+          {
+            "id": "p02-session-4-a2",
+            "text": "Group Mini-Challenge - Fiddles: Process 2 (Tinderbox Collective project)",
+            "image": "/img/s4/s4_fiddles_minichallenge_process2.jpg"
+          },
+          {
+            "id": "p02-session-4-a3",
+            "text": "Group Mini-Challenge - Fiddles: Iterations (Tinderbox Collective project)",
+            "image": "/img/s4/s4_fiddles_minichallengeprocess3.png"
+          },
+          {
+            "id": "p02-session-4-a4",
+            "text": "Group Mini-Challenge. Presentations - Fiddles: Final (Tinderbox Collective project)",
+            "image": "/img/s4/s4_fiddles_minichallengeprocess4.png"
           }
+        
         ]
       }
     },
@@ -208,8 +224,23 @@
         "session-4": [
           {
             "id": "p03-session-4-a1",
-            "text": "Summarised one improved learning workflow.",
-            "image": ""
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Process (The Heath FC).",
+            "image": "/img/s4/s4_magicians_firstdrafts.png"
+          },
+          {
+            "id": "p03-session-4-a2",
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Iterations (The Heath FC).",
+            "image": "/img/s4/s4_magicians-earlyiterations.png"
+          },
+          {
+            "id": "p03-session-4-a3",
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Process (The Heath FC).",
+            "image": "/img/s4/s4_magicians_seconditeration.png"
+          },
+          {
+            "id": "p03-session-4-a4",
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Final iterations (The Heath FC).",
+            "image": "/img/s4/s4_magiciansfinaliterations.png"
           }
         ]
       }
@@ -242,8 +273,13 @@
         "session-4": [
           {
             "id": "p04-session-4-a1",
-            "text": "Finished with a low-risk AI usage guide.",
-            "image": ""
+            "text": "Group Mini-Challenge. Presentations - Vintage Vibes Team: Process (Vintage Vibes Org)",
+            "image": "/img/s4/s4_minichallenge_vv_draft_workflow.png"
+          },
+          {
+            "id": "p04-session-4-a2",
+            "text": "Group Mini-Challenge. Presentations - Vintage Vibes Team: Final workflow (Vintage Vibes Org)",
+            "image": "/img/s4/s4_minichallenge_process_final.png"
           }
         ]
       }
