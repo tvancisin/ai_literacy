@@ -312,8 +312,8 @@
         "session-4": [
           {
             "id": "p05-session-4-a1",
-            "text": "Designed a repeatable review step.",
-            "image": ""
+            "text": "Personal project presentation: Tackling homelessness - Data and visualisation",
+            "image": "/img/s4/s4_personalproj_M_class.png"
           }
         ]
       }
@@ -351,8 +351,8 @@
         "session-4": [
           {
             "id": "p06-session-4-a1",
-            "text": "Created an action plan for one recurring workflow.",
-            "image": ""
+            "text": "Personal project: Comparing print media around AI",
+            "image": "/img/s4/s4_personalproj_H_class.png"
           }
         ]
       }
@@ -390,8 +390,8 @@
         "session-4": [
           {
             "id": "p07-session-4-a1",
-            "text": "Shared a reflection on confidence and limits.",
-            "image": ""
+            "text": "",
+            "image": "/img/s4/s4_class_presentations.jpg"
           }
         ]
       }
@@ -424,8 +424,8 @@
         "session-4": [
           {
             "id": "p08-session-4-a1",
-            "text": "Turned the rubric into a future checklist.",
-            "image": ""
+            "text": "",
+            "image": "/img/s4/s4_classengagement.jpg"
           }
         ]
       }
@@ -468,8 +468,8 @@
         "session-4": [
           {
             "id": "p09-session-4-a1",
-            "text": "It said it cannot think.",
-            "image": ""
+            "text": "",
+            "image": "/img/s4/s4_classfeedback.jpg"
           }
         ]
       }
@@ -527,8 +527,13 @@
         "session-4": [
           {
             "id": "p10-session-4-a1",
-            "text": "Group work - planning",
-            "image": ""
+            "text": "Peer feedback",
+            "image": "/img/s4/s4_peer_feedback.jpg"
+          },
+          {
+            "id": "p10-session-4-a2",
+            "text": "Peer feedback",
+            "image": "/img/s4/s4_peer_feedback_2.jpg"
           }
         ]
       }
@@ -567,8 +572,13 @@
         "session-4": [
           {
             "id": "p11-session-4-a1",
-            "text": "Summarised personal boundaries for AI use.",
-            "image": ""
+            "text": "Peer feedback & presentation.",
+            "image": "/img/s4/s4_presentations2.jpg"
+          },
+          {
+            "id": "p11-session-4-a2",
+            "text": "Teams.",
+            "image": "/img/s4/s4_teams.jpg"
           }
         ]
       }
@@ -597,11 +607,12 @@
           }
         ],
         "session-3": [],
+
         "session-4": [
           {
             "id": "p12-session-4-a1",
-            "text": "Shared a scenario with review points before action.",
-            "image": ""
+            "text": "Feedback & presentation.",
+            "image": "/img/s4/s4_presentations3.jpg"
           }
         ]
       }
@@ -625,11 +636,12 @@
           }
         ],
         "session-3": [],
+
         "session-4": [
           {
             "id": "p13-session-4-a1",
-            "text": "Presented clear human review responsibilities.",
-            "image": ""
+            "text": "",
+            "image": "/img/s4/s4_teaching.jpg"
           }
         ]
       }
@@ -647,11 +659,12 @@
           }
         ],
         "session-3": [],
+
         "session-4": [
           {
             "id": "p14-session-4-a1",
-            "text": "Summarised what must be verified before reuse.",
-            "image": ""
+            "text": "Q&A",
+            "image": "/img/s4/s4_peer_feedback_questions.jpg"
           }
         ]
       }
@@ -663,7 +676,7 @@
         "session-1": [
           {
             "id": "p15-session-1-a1",
-            "text": "Neuron Network",
+            "text": "Neuron Network (Cajal)",
             "image": "/img/s1/neurons.jpg"
           },
           {
@@ -683,8 +696,8 @@
         "session-4": [
           {
             "id": "p15-session-4-a1",
-            "text": "Closed with a guide for asking, verifying, and stopping.",
-            "image": ""
+            "text": "Feedback & discussion.",
+            "image": "/img/s4/s4_peer_feedback2.jpg"
           }
         ]
       }
