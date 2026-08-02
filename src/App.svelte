@@ -17,9 +17,27 @@
   // data
   let isLoading = true;
   let loadError = null;
-  let progress = { sessions: [], participants: [] };
+  let progress = {
+    sessions: [],
+    participants: [],
+    surveyResponses: null,
+  };
+
   $: sessions = progress.sessions ?? [];
   $: participants = progress.participants ?? [];
+
+  $: surveySource = progress.surveyResponses
+    ? {
+        id: "survey-group",
+        name: progress.surveyResponses.name ?? "Group survey responses",
+        sessions: progress.surveyResponses.sessions ?? {},
+        isSurvey: true,
+      }
+    : null;
+
+  $: artifactSources = surveySource
+    ? [...participants, surveySource]
+    : participants;
 
   // layout
   let height = 400;
@@ -82,7 +100,7 @@
     return null;
   }
 
-  $: rawArtifacts = participants.flatMap((participant) =>
+  $: rawArtifacts = artifactSources.flatMap((participant) =>
     sessions.flatMap((session) => {
       const sessionArtifacts = participant.sessions?.[session.id] ?? [];
 
@@ -100,6 +118,7 @@
           participant,
           session,
           artifact,
+          isSurvey: participant.isSurvey === true,
           artifactIndex: index,
           radius,
           text,
@@ -374,6 +393,7 @@
         {@const isActive = activeArtifactId === artifact.id}
         <g
           class:active={isActive}
+          class:survey={artifact.isSurvey}
           class="artifact-marker"
           role="button"
           tabindex="0"
@@ -662,17 +682,49 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
   }
+
+  /* Show the complete survey image when the node is expanded */
+  .artifact-marker.survey.active .marker-content-inner.has-image {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+  }
+
+  /* Hide only the visible grey caption on survey image nodes */
+  .artifact-marker.survey .marker-content-inner.image-with-text .marker-text {
+    display: none;
+  }
+
   .marker-ring {
     fill: none;
     stroke: currentColor;
     stroke-width: 0;
     pointer-events: none;
-    transition: stroke-width 220ms ease;
+    transition:
+      stroke-width 220ms ease,
+      opacity 220ms ease;
   }
 
   .artifact-marker:hover .marker-ring,
   .artifact-marker:focus .marker-ring,
   .artifact-marker.active .marker-ring {
     stroke-width: 2;
+  }
+
+  /* Survey nodes: permanent deep-blue ring */
+  .artifact-marker.survey .marker-ring {
+    stroke: #012c56;
+    stroke-width: 3;
+    opacity: 1;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .artifact-marker.survey:hover .marker-ring,
+  .artifact-marker.survey:focus .marker-ring,
+  .artifact-marker.survey.active .marker-ring {
+    stroke: #012c56;
+    stroke-width: 4;
+    opacity: 1;
   }
 </style>

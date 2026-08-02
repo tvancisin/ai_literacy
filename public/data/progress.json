@@ -21,731 +21,844 @@
       "topic": "Application"
     }
   ],
-      "participants": [
+  "surveyResponses": {
+    "name": "Group survey responses",
+    "sessions": {
+      "session-1": [
         {
-          "id": "p01",
-          "name": "Participant 1",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p01-session-1-a1",
-                "text": "Is AI dangerous?",
-                "image": ""
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p01-session-2-a1",
-                "text": "",
-                "image": "/img/s2/s2_botty.jpg"
-              },
-              {
-                "id": "p01-session-2-a2",
-                "text": "The words machine learning and program/programming are used interchangeably, what are the differences?",
-                "image": ""
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p01-session-3-a1",
-                "text": "I'm more worried about data, like where does it go, where is it kept?",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "p01-session-4-a1",
-                "attribution": "Sasha Saben Callaghan",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personalproj_SashaSabenCallaghan_class.png"
-              },
-              {
-                "id": "p01-session-4-a2",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_0_SashaCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a3",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_1_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a4",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "attribution": "Sasha",
-                "image": "/img/s4/s4_personal_project_2_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a5",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_ableism_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a6",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_artists_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a7",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_calltoaction_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a8",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_data_nhs_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a9",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_datacentres_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a11",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_economics_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a12",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_final_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a13",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_impacts_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a15",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_labourimpacts_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a16",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan (final remarks).",
-                "image": "/img/s4/s4_personal_project_remarks_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a17",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_risks_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a18",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_technofeudalism_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a19",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_value_SashaSabenCallaghan_copyright.png"
-              },
-              {
-                "id": "p01-session-4-a20",
-                "attribution": "Sasha",
-                "text": "Personal project - artist: Sasha Saben Callaghan.",
-                "image": "/img/s4/s4_personal_project_work_SashaSabenCallaghan_copyright.png"
-              }
-            ]
-          }
+          "id": "survey-s1-q01",
+          "text": "What age are you?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p02",
-          "name": "Participant 2",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p02-session-1-a1",
-                "text": "I heard that the brain is the hardware and the mind is software, what do you think?",
-                "image": ""
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p02-session-2-a1",
-                "text": "I have started to evaluate the answers from the AI a bit more now since the course. I have been asking it questions.",
-                "image": ""
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p02-session-3-a1",
-                "text": "I read about the agent which escaped and saw both Hugging Face and Open AI leaders talk about it, they used the words unprecedented which gives the idea that this a special thing, that the agent acted on its own. It was very interesting how they talked about it",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "team-fiddles-session-4-a1",
-                "attribution": "Team: Fiddles",
-                "text": "Group Mini-Challenge - Fiddles: Process (Tinderbox Collective project)",
-                "image": "/img/s4/s4_challengeprocess_1.jpg"
-              },
-              {
-                "id": "team-fiddles-session-4-a2",
-                "attribution": "Team: Fiddles",
-                "text": "Group Mini-Challenge - Fiddles: Process 2 (Tinderbox Collective project)",
-                "image": "/img/s4/s4_fiddles_minichallenge_process2.jpg"
-              },
-              {
-                "id": "team-fiddles-session-4-a3",
-                "attribution": "Team: Fiddles",
-                "text": "Group Mini-Challenge - Fiddles: Iterations (Tinderbox Collective project)",
-                "image": "/img/s4/s4_fiddles_minichallengeprocess3.png"
-              },
-              {
-                "id": "team-fiddles-session-4-a4",
-                "attribution": "Team: Fiddles",
-                "text": "Group Mini-Challenge. Presentations - Fiddles: Final (Tinderbox Collective project)",
-                "image": "/img/s4/s4_fiddles_minichallengeprocess4.png"
-              }
-            ]
-          }
+          "id": "survey-s1-q02",
+          "text": "What level of education have you reached?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p03",
-          "name": "Participant 3",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p03-session-1-a1",
-                "text": "",
-                "image": "/img/s1/s1_somya.jpg"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p03-session-2-a1",
-                "text": "I have heard about Data Centres, but what are they doing?",
-                "image": ""
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p03-session-3-a1",
-                "text": "There is a petition right now about the data centre planned in Gyle, we could push for them not to open in our areas, but then they would just build it somewhere else. Is there any point in the petitions or challenging this?",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "team-magicians-session-4-a5",
-                "attribution": "Team: The Magicians",
-                "text": "Group Mini-Challenge. Presentations - The Magicians: Process (The Heath FC).",
-                "image": "/img/s4/s4_magicians_firstdrafts.png"
-              },
-              {
-                "id": "team-magicians-session-4-a2",
-                "attribution": "Team: The Magicians",
-                "text": "Group Mini-Challenge. Presentations - The Magicians: Iterations (The Heath FC).",
-                "image": "/img/s4/s4_magicians-earlyiterations.png"
-              },
-              {
-                "id": "team-magicians-session-4-a3",
-                "attribution": "Team: The Magicians",
-                "text": "Group Mini-Challenge. Presentations - The Magicians: Process (The Heath FC).",
-                "image": "/img/s4/s4_magicians_seconditeration.png"
-              },
-              {
-                "id": "team-magicians-session-4-a4",
-                "attribution": "Team: The Magicians",
-                "text": "Group Mini-Challenge. Presentations - The Magicians: Final iterations (The Heath FC).",
-                "image": "/img/s4/s4_magiciansfinaliterations.png"
-              }
-            ]
-          }
+          "id": "survey-s1-q03",
+          "text": "How familiar are you with artificial intelligence (AI)?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p04",
-          "name": "Participant 4",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p04-session-1-a1",
-                "text": "I’m an artist and AI companies have stolen creative works, there is no clear regulations for AI, and a monopoly from companies.",
-                "image": ""
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p04-session-2-a1",
-                "text": "Only 2.5% of the water on Earth is fresh. Can we use Ocean Water to cool the data centres?",
-                "image": ""
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p04-session-3-a1",
-                "text": "There was a robot which ran out of battery and got stuck in the road, it has been in the news",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "team-vintagevibes-session-4-a1",
-                "attribution": "Team: Vintage Vibes",
-                "text": "Group Mini-Challenge. Presentations - Vintage Vibes Team: Process (Vintage Vibes Org)",
-                "image": "/img/s4/s4_minichallenge_vv_draft_workflow.png"
-              },
-              {
-                "id": "team-vintagevibes-session-4-a2",
-                "attribution": "Team: Vintage Vibes",
-                "text": "Group Mini-Challenge. Presentations - Vintage Vibes Team: Final workflow (Vintage Vibes Org)",
-                "image": "/img/s4/s4_minichallenge_process_final.png"
-              }
-            ]
-          }
+          "id": "survey-s1-q04",
+          "text": "Where did you first encounter AI?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p05",
-          "name": "Participant 5",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p05-session-1-a1",
-                "text": "AI is being used in drones to commit harm in other countries, using bombs on people.",
-                "image": ""
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p05-session-2-a1",
-                "text": "",
-                "image": "/img/s2/s2_pen_paper.jpg"
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p05-session-3-a1",
-                "text": "I asked the chatbot how to use it, and it told me to give it a role, like acting as a language teacher",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "p05-session-4-a1",
-                "attribution": "M",
-                "text": "Personal project presentation: Tackling homelessness - Data and visualisation",
-                "image": "/img/s4/s4_personalproj_M_class.png"
-              }
-            ]
-          }
+          "id": "survey-s1-q05",
+          "text": "If you use AI already, what tools do you use and what do you use them for?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p06",
-          "name": "Participant 6",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p06-session-1-a1",
-                "text": "I have heard about AI that can allow people to chat with their dead family members.",
-                "image": ""
-              },
-              {
-                "id": "class-session-1-a1",
-                "attribution": "Group",
-                "text": "",
-                "image": "/img/s1/s1_group.jpg"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p06-session-2-a1",
-                "text": "What do the companies have to gain from pushing AI. I understand the limitations of LLMs but people like Peter Thiel are suggesting it can replace people, is it just for money?",
-                "image": ""
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p06-session-3-a1",
-                "text": "All of this is worrying, with all the data centres going up for AI, are you not worried about the push for AI?",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "p06-session-4-a1",
-                "attribution": "H",
-                "text": "Personal project: Comparing print media around AI",
-                "image": "/img/s4/s4_personalproj_H_class.png"
-              }
-            ]
-          }
+          "id": "survey-s1-q06",
+          "text": "How do you feel about AI?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p07",
-          "name": "Participant 7",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p07-session-1-a1",
-                "text": "I have heard about what AI does to the environment and that makes me very sad and worried.",
-                "image": ""
-              },
-              {
-                "id": "class-session-1-a2",
-                "attribution": "Class",
-                "text": "",
-                "image": "/img/s1/s1_group_1.jpg"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p07-session-2-a1",
-                "text": "I can see kids glued to their phones already, increase in mental health problems, and AI added to that will make things worse.",
-                "image": ""
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p07-session-3-a1",
-                "text": "The AI has been very polite and friendly, I had a lovely conversation with it.",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "p07-session-4-a1",
-                "text": "",
-                "image": "/img/s4/s4_class_presentations.jpg"
-              }
-            ]
-          }
+          "id": "survey-s1-q07",
+          "text": "What do you imaging when you think about AI?",
+          "image": "/img/surveys/testimg.png"
+        }
+      ],
+      "session-2": [
+        {
+          "id": "survey-s2-q01",
+          "text": "How comfortable do you feel with artificial intelligence (AI)?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p08",
-          "name": "Participant 8",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p08-session-1-a1",
-                "text": "I had a go at AI right before this course to prepare, and the conversation works well. It feels like talking to a person. Sometimes it says ‘thinking’.",
-                "image": ""
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p08-session-2-a1",
-                "text": "",
-                "image": "/img/s2/s2_table_ppl.jpg"
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p08-session-3-a1",
-                "text": "I have been using chatgpt for pictures.",
-                "image": ""
-              }
-            ],
-            "session-4": [
-              {
-                "id": "p08-session-4-a1",
-                "text": "",
-                "image": "/img/s4/s4_classengagement.jpg"
-              }
-            ]
-          }
+          "id": "survey-s2-q02",
+          "text": "Has your opinion of AI changed since you started the course? If so, how has it changed?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p09",
-          "name": "Participant 9",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p09-session-1-a1",
-                "text": "I am quite apprehensive. I am only just playing catchup with computers after a long time.",
-                "image": ""
-              }
-            ],
-            "session-2": [
-              {
-                "id": "tutor-session-2-a1",
-                "attribution": "Tutor",
-                "text": "",
-                "image": "/img/s2/s2_somya.jpg"
-              }
-            ],
-            "session-3": [
-              {
-                "id": "team-magicians-session-3-a1",
-                "attribution": "Team: The Magicians",
-                "text": "Group work - Planning (The Magicicians).",
-                "image": "/img/s3/s3_canvaAI_themagicians_posterv1.png"
-              },
-              {
-                "id": "team-magicians-session-3-a2",
-                "attribution": "Team: The Magicians",
-                "text": "Group work - Marketing Plan (The Magicians).",
-                "image": "/img/s3/s3_marketing_plan_magicians.png"
-              },
-              {
-                "id": "team-magicians-session-3-a3",
-                "attribution": "Team: The Magicians",
-                "text": "Group work - Original materials for prompt examples (The Magicians).",
-                "image": "/img/s3/s3_original_logo_heathfc.png"
-              }
-            ],
-            "session-4": [
-              {
-                "id": "class-session-4-a1",
-                "text": "",
-                "image": "/img/s4/s4_classfeedback.jpg"
-              }
-            ]
-          }
+          "id": "survey-s2-q03",
+          "text": "What good things do you think AI could be used for in your local community?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p10",
-          "name": "Participant 10",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p10-session-1-a1",
-                "attribution": "Tutor & member",
-                "text": "",
-                "image": "/img/s1/s1_couple.jpg"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p10-session-2-a1",
-                "attribution": "Team: Fiddles",
-                "text": "",
-                "image": "/img/s2/s2_solution.jpg"
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p10-session-3-a1",
-                "text": "Under water data centre.",
-                "image": "/img/s3/s3_underwater_datacentres.jpg"
-              },
-              {
-                "id": "p10-session-3-a2",
-                "text": "Class notes.",
-                "image": "/img/s3/s3_notes.jpg"
-              },
-              {
-                "id": "p10-session-3-a3",
-                "text": "Class notes",
-                "image": "/img/s3/s3_notes_4.jpg"
-              },
-              {
-                "id": "p10-session-3-a4",
-                "text": "Class notes.",
-                "image": "/img/s3/s3_notes_5.jpg"
-              },
-              {
-                "id": "p10-session-3-a5",
-                "text": "Guidance.",
-                "image": "/img/s3/s3_checklist.jpg"
-              },
-              {
-                "id": "p10-session-3-a6",
-                "text": "Dta centres (notes).",
-                "image": "/img/s3/s3_data_centres.jpg"
-              }
-            ],
-            "session-4": [
-              {
-                "id": "p10-session-4-a1",
-                "text": "Peer feedback",
-                "image": "/img/s4/s4_peer_feedback.jpg"
-              },
-              {
-                "id": "p10-session-4-a2",
-                "text": "Peer feedback",
-                "image": "/img/s4/s4_peer_feedback_2.jpg"
-              }
-            ]
-          }
+          "id": "survey-s2-q04",
+          "text": "Are there any ways you think AI could harm your local community?",
+          "image": "/img/surveys/testimg.png"
+        }
+      ],
+      "session-3": [
+        {
+          "id": "survey-s3-q01",
+          "text": "How comfortable do you feel with artificial intelligence (AI)?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p11",
-          "name": "Participant 11",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p11-session-1-a1",
-                "attribution": "Team: Vintage Vibes",
-                "text": "",
-                "image": "/img/s1/s1_solution.png"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p11-session-2-a1",
-                "text": "",
-                "image": "/img/s2/s2_phone.jpg"
-              }
-            ],
-            "session-3": [
-              {
-                "id": "p11-session-3-a1",
-                "text": "Group work - Planning (Fiddles).",
-                "image": "/img/s3/s3_planning_fiddles.jpg",
-                "imagePosition": "center top"
-              },
-              {
-                "id": "team-fiddles-session-3-a2",
-                "attribution": "Team: Fiddles",
-                "text": "Group work - Planning (Fiddles) - iterative chatbot use.",
-                "image": "/img/s3/s3_fiddle_draft1_chatgpt.jpg"
-              }
-            ],
-            "session-4": [
-              {
-                "id": "team-class-session-4-a1",
-                "attribution": "Class",
-                "text": "Peer feedback & presentation.",
-                "image": "/img/s4/s4_presentations2.jpg"
-              },
-              {
-                "id": "team-vintagevibes-session-4-a3",
-                "text": "Team Vintage Vibes.",
-                "image": "/img/s4/s4_teams.jpg"
-              },
-              {
-                "id": "class-interaction-session-4-a7",
-                "text": "Q&A interface",
-                "image": "/img/s4/s4_interface.jpg"
-              }
-            ]
-          }
+          "id": "survey-s3-q02",
+          "text": "Has your opinion of AI changed since you started the course? If so, how has it changed?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p12",
-          "name": "Participant 12",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p12-session-1-a1",
-                "text": "",
-                "image": "/img/s1/s1_participant.jpg"
-              },
-              {
-                "id": "p12-session-1-a2",
-                "text": "",
-                "image": "/img/s1/s1_participant_2.jpg"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p12-session-2-a1",
-                "text": "",
-                "image": "/img/s2/s2_participant.jpg"
-              }
-            ],
-            "session-3": [],
-            "session-4": [
-              {
-                "id": "team-magicians-session-4-a1",
-                "attribution": "Team: The Magicians",
-                "text": "Feedback & presentation.",
-                "image": "/img/s4/s4_presentations3.jpg"
-              }
-            ]
-          }
+          "id": "survey-s3-q03",
+          "text": "How do you think you'll use AI in the future, if you use it at all?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p13",
-          "name": "Participant 13",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "p13-session-1-a1",
-                "text": "",
-                "image": "/img/s1/s1_table_1.jpg"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p13-session-2-a1",
-                "text": "",
-                "image": "/img/s2/s2_participant_2.jpg"
-              }
-            ],
-            "session-3": [],
-            "session-4": [
-              {
-                "id": "tutor-session-4-a1",
-                "text": "Tutor",
-                "image": "/img/s4/s4_teaching.jpg"
-              }
-            ]
-          }
+          "id": "survey-s3-q04",
+          "text": "If you could say one thing to the people and companies who develop AI tools, what would it be?",
+          "image": "/img/surveys/testimg.png"
+        }
+      ],
+      "session-4": [
+      {
+          "id": "survey-s4-q01",
+          "text": "How comfortable do you feel with artificial intelligence (AI)? Scale - 1 (not comfortable at all) - 5 (very comfortable)",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p14",
-          "name": "Participant 14",
-          "sessions": {
-            "session-1": [],
-            "session-2": [
-              {
-                "id": "-class-session-2-a1",
-                "attribution": "Class",
-                "text": "",
-                "image": "/img/s2/s2_group.jpg"
-              }
-            ],
-            "session-3": [],
-            "session-4": [
-              {
-                "id": "p14-session-4-a1",
-                "text": "Q&A",
-                "image": "/img/s4/s4_peer_feedback_questions.jpg"
-              }
-            ]
-          }
+          "id": "survey-s4-q02",
+          "text": "Has your opinion of AI changed since you started the course? If so, how has it changed?",
+          "image": "/img/surveys/testimg.png"
         },
         {
-          "id": "p15",
-          "name": "Participant 15",
-          "sessions": {
-            "session-1": [
-              {
-                "id": "tutor-materials-session-1-a1",
-                "attribution": "Tutor materials",
-                "text": "Neuron Network (Cajal)",
-                "image": "/img/s1/neurons.jpg"
-              },
-              {
-                "id": "class-session-1-a3",
-                "text": "Class",
-                "image": "/img/s1/s1_table_group.jpg"
-              }
-            ],
-            "session-2": [
-              {
-                "id": "p15-session-2-a1",
-                "text": "",
-                "image": "/img/s2/s2_computer.jpg"
-              }
-            ],
-            "session-3": [],
-            "session-4": [
-              {
-                "id": "p15-session-4-a1",
-                "text": "Feedback & discussion.",
-                "image": "/img/s4/s4_peer_feedback2.jpg"
-              }
-            ]
-          }
+          "id": "survey-s4-q03",
+          "text": "What has been the most surprising or interesting thing you have learned in the workshops?",
+          "image": "/img/surveys/testimg.png"
+        },
+        {
+          "id": "survey-s4-q04",
+          "text": "How could we improve these workshops in the future?",
+          "image": "/img/surveys/testimg.png"
+        },
+        {
+          "id": "survey-s4-q05",
+          "text": "Do you have any final thoughts you'd like to share about AI?",
+          "image": "/img/surveys/testimg.png"
         }
       ]
     }
+  },
+  "participants": [
+    {
+      "id": "p01",
+      "name": "Participant 1",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p01-session-1-a1",
+            "text": "Is AI dangerous?",
+            "image": ""
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p01-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_botty.jpg"
+          },
+          {
+            "id": "p01-session-2-a2",
+            "text": "The words machine learning and program/programming are used interchangeably, what are the differences?",
+            "image": ""
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p01-session-3-a1",
+            "text": "I'm more worried about data, like where does it go, where is it kept?",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "p01-session-4-a1",
+            "attribution": "Sasha Saben Callaghan",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personalproj_SashaSabenCallaghan_class.png"
+          },
+          {
+            "id": "p01-session-4-a2",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_0_SashaCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a3",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_1_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a4",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "attribution": "Sasha",
+            "image": "/img/s4/s4_personal_project_2_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a5",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_ableism_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a6",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_artists_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a7",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_calltoaction_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a8",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_data_nhs_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a9",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_datacentres_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a11",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_economics_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a12",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_final_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a13",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_impacts_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a15",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_labourimpacts_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a16",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan (final remarks).",
+            "image": "/img/s4/s4_personal_project_remarks_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a17",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_risks_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a18",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_technofeudalism_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a19",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_value_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a20",
+            "attribution": "Sasha",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_work_SashaSabenCallaghan_copyright.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p02",
+      "name": "Participant 2",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p02-session-1-a1",
+            "text": "I heard that the brain is the hardware and the mind is software, what do you think?",
+            "image": ""
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p02-session-2-a1",
+            "text": "I have started to evaluate the answers from the AI a bit more now since the course. I have been asking it questions.",
+            "image": ""
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p02-session-3-a1",
+            "text": "I read about the agent which escaped and saw both Hugging Face and Open AI leaders talk about it, they used the words unprecedented which gives the idea that this a special thing, that the agent acted on its own. It was very interesting how they talked about it",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "team-fiddles-session-4-a1",
+            "attribution": "Team: Fiddles",
+            "text": "Group Mini-Challenge - Fiddles: Process (Tinderbox Collective project)",
+            "image": "/img/s4/s4_challengeprocess_1.jpg"
+          },
+          {
+            "id": "team-fiddles-session-4-a2",
+            "attribution": "Team: Fiddles",
+            "text": "Group Mini-Challenge - Fiddles: Process 2 (Tinderbox Collective project)",
+            "image": "/img/s4/s4_fiddles_minichallenge_process2.jpg"
+          },
+          {
+            "id": "team-fiddles-session-4-a3",
+            "attribution": "Team: Fiddles",
+            "text": "Group Mini-Challenge - Fiddles: Iterations (Tinderbox Collective project)",
+            "image": "/img/s4/s4_fiddles_minichallengeprocess3.png"
+          },
+          {
+            "id": "team-fiddles-session-4-a4",
+            "attribution": "Team: Fiddles",
+            "text": "Group Mini-Challenge. Presentations - Fiddles: Final (Tinderbox Collective project)",
+            "image": "/img/s4/s4_fiddles_minichallengeprocess4.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p03",
+      "name": "Participant 3",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p03-session-1-a1",
+            "text": "",
+            "image": "/img/s1/s1_somya.jpg"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p03-session-2-a1",
+            "text": "I have heard about Data Centres, but what are they doing?",
+            "image": ""
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p03-session-3-a1",
+            "text": "There is a petition right now about the data centre planned in Gyle, we could push for them not to open in our areas, but then they would just build it somewhere else. Is there any point in the petitions or challenging this?",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "team-magicians-session-4-a5",
+            "attribution": "Team: The Magicians",
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Process (The Heath FC).",
+            "image": "/img/s4/s4_magicians_firstdrafts.png"
+          },
+          {
+            "id": "team-magicians-session-4-a2",
+            "attribution": "Team: The Magicians",
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Iterations (The Heath FC).",
+            "image": "/img/s4/s4_magicians-earlyiterations.png"
+          },
+          {
+            "id": "team-magicians-session-4-a3",
+            "attribution": "Team: The Magicians",
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Process (The Heath FC).",
+            "image": "/img/s4/s4_magicians_seconditeration.png"
+          },
+          {
+            "id": "team-magicians-session-4-a4",
+            "attribution": "Team: The Magicians",
+            "text": "Group Mini-Challenge. Presentations - The Magicians: Final iterations (The Heath FC).",
+            "image": "/img/s4/s4_magiciansfinaliterations.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p04",
+      "name": "Participant 4",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p04-session-1-a1",
+            "text": "I’m an artist and AI companies have stolen creative works, there is no clear regulations for AI, and a monopoly from companies.",
+            "image": ""
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p04-session-2-a1",
+            "text": "Only 2.5% of the water on Earth is fresh. Can we use Ocean Water to cool the data centres?",
+            "image": ""
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p04-session-3-a1",
+            "text": "There was a robot which ran out of battery and got stuck in the road, it has been in the news",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "team-vintagevibes-session-4-a1",
+            "attribution": "Team: Vintage Vibes",
+            "text": "Group Mini-Challenge. Presentations - Vintage Vibes Team: Process (Vintage Vibes Org)",
+            "image": "/img/s4/s4_minichallenge_vv_draft_workflow.png"
+          },
+          {
+            "id": "team-vintagevibes-session-4-a2",
+            "attribution": "Team: Vintage Vibes",
+            "text": "Group Mini-Challenge. Presentations - Vintage Vibes Team: Final workflow (Vintage Vibes Org)",
+            "image": "/img/s4/s4_minichallenge_process_final.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p05",
+      "name": "Participant 5",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p05-session-1-a1",
+            "text": "AI is being used in drones to commit harm in other countries, using bombs on people.",
+            "image": ""
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p05-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_pen_paper.jpg"
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p05-session-3-a1",
+            "text": "I asked the chatbot how to use it, and it told me to give it a role, like acting as a language teacher",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "p05-session-4-a1",
+            "attribution": "M",
+            "text": "Personal project presentation: Tackling homelessness - Data and visualisation",
+            "image": "/img/s4/s4_personalproj_M_class.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p06",
+      "name": "Participant 6",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p06-session-1-a1",
+            "text": "I have heard about AI that can allow people to chat with their dead family members.",
+            "image": ""
+          },
+          {
+            "id": "class-session-1-a1",
+            "attribution": "Group",
+            "text": "",
+            "image": "/img/s1/s1_group.jpg"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p06-session-2-a1",
+            "text": "What do the companies have to gain from pushing AI. I understand the limitations of LLMs but people like Peter Thiel are suggesting it can replace people, is it just for money?",
+            "image": ""
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p06-session-3-a1",
+            "text": "All of this is worrying, with all the data centres going up for AI, are you not worried about the push for AI?",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "p06-session-4-a1",
+            "attribution": "H",
+            "text": "Personal project: Comparing print media around AI",
+            "image": "/img/s4/s4_personalproj_H_class.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p07",
+      "name": "Participant 7",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p07-session-1-a1",
+            "text": "I have heard about what AI does to the environment and that makes me very sad and worried.",
+            "image": ""
+          },
+          {
+            "id": "class-session-1-a2",
+            "attribution": "Class",
+            "text": "",
+            "image": "/img/s1/s1_group_1.jpg"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p07-session-2-a1",
+            "text": "I can see kids glued to their phones already, increase in mental health problems, and AI added to that will make things worse.",
+            "image": ""
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p07-session-3-a1",
+            "text": "The AI has been very polite and friendly, I had a lovely conversation with it.",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "p07-session-4-a1",
+            "text": "",
+            "image": "/img/s4/s4_class_presentations.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p08",
+      "name": "Participant 8",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p08-session-1-a1",
+            "text": "I had a go at AI right before this course to prepare, and the conversation works well. It feels like talking to a person. Sometimes it says ‘thinking’.",
+            "image": ""
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p08-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_table_ppl.jpg"
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p08-session-3-a1",
+            "text": "I have been using chatgpt for pictures.",
+            "image": ""
+          }
+        ],
+        "session-4": [
+          {
+            "id": "p08-session-4-a1",
+            "text": "",
+            "image": "/img/s4/s4_classengagement.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p09",
+      "name": "Participant 9",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p09-session-1-a1",
+            "text": "I am quite apprehensive. I am only just playing catchup with computers after a long time.",
+            "image": ""
+          }
+        ],
+        "session-2": [
+          {
+            "id": "tutor-session-2-a1",
+            "attribution": "Tutor",
+            "text": "",
+            "image": "/img/s2/s2_somya.jpg"
+          }
+        ],
+        "session-3": [
+          {
+            "id": "team-magicians-session-3-a1",
+            "attribution": "Team: The Magicians",
+            "text": "Group work - Planning (The Magicicians).",
+            "image": "/img/s3/s3_canvaAI_themagicians_posterv1.png"
+          },
+          {
+            "id": "team-magicians-session-3-a2",
+            "attribution": "Team: The Magicians",
+            "text": "Group work - Marketing Plan (The Magicians).",
+            "image": "/img/s3/s3_marketing_plan_magicians.png"
+          },
+          {
+            "id": "team-magicians-session-3-a3",
+            "attribution": "Team: The Magicians",
+            "text": "Group work - Original materials for prompt examples (The Magicians).",
+            "image": "/img/s3/s3_original_logo_heathfc.png"
+          }
+        ],
+        "session-4": [
+          {
+            "id": "class-session-4-a1",
+            "text": "",
+            "image": "/img/s4/s4_classfeedback.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p10",
+      "name": "Participant 10",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p10-session-1-a1",
+            "attribution": "Tutor & member",
+            "text": "",
+            "image": "/img/s1/s1_couple.jpg"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p10-session-2-a1",
+            "attribution": "Team: Fiddles",
+            "text": "",
+            "image": "/img/s2/s2_solution.jpg"
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p10-session-3-a1",
+            "text": "Under water data centre.",
+            "image": "/img/s3/s3_underwater_datacentres.jpg"
+          },
+          {
+            "id": "p10-session-3-a2",
+            "text": "Class notes.",
+            "image": "/img/s3/s3_notes.jpg"
+          },
+          {
+            "id": "p10-session-3-a3",
+            "text": "Class notes",
+            "image": "/img/s3/s3_notes_4.jpg"
+          },
+          {
+            "id": "p10-session-3-a4",
+            "text": "Class notes.",
+            "image": "/img/s3/s3_notes_5.jpg"
+          },
+          {
+            "id": "p10-session-3-a5",
+            "text": "Guidance.",
+            "image": "/img/s3/s3_checklist.jpg"
+          },
+          {
+            "id": "p10-session-3-a6",
+            "text": "Dta centres (notes).",
+            "image": "/img/s3/s3_data_centres.jpg"
+          }
+        ],
+        "session-4": [
+          {
+            "id": "p10-session-4-a1",
+            "text": "Peer feedback",
+            "image": "/img/s4/s4_peer_feedback.jpg"
+          },
+          {
+            "id": "p10-session-4-a2",
+            "text": "Peer feedback",
+            "image": "/img/s4/s4_peer_feedback_2.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p11",
+      "name": "Participant 11",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p11-session-1-a1",
+            "attribution": "Team: Vintage Vibes",
+            "text": "",
+            "image": "/img/s1/s1_solution.png"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p11-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_phone.jpg"
+          }
+        ],
+        "session-3": [
+          {
+            "id": "p11-session-3-a1",
+            "text": "Group work - Planning (Fiddles).",
+            "image": "/img/s3/s3_planning_fiddles.jpg",
+            "imagePosition": "center top"
+          },
+          {
+            "id": "team-fiddles-session-3-a2",
+            "attribution": "Team: Fiddles",
+            "text": "Group work - Planning (Fiddles) - iterative chatbot use.",
+            "image": "/img/s3/s3_fiddle_draft1_chatgpt.jpg"
+          }
+        ],
+        "session-4": [
+          {
+            "id": "team-class-session-4-a1",
+            "attribution": "Class",
+            "text": "Peer feedback & presentation.",
+            "image": "/img/s4/s4_presentations2.jpg"
+          },
+          {
+            "id": "team-vintagevibes-session-4-a3",
+            "text": "Team Vintage Vibes.",
+            "image": "/img/s4/s4_teams.jpg"
+          },
+          {
+            "id": "class-interaction-session-4-a7",
+            "text": "Q&A interface",
+            "image": "/img/s4/s4_interface.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p12",
+      "name": "Participant 12",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p12-session-1-a1",
+            "text": "",
+            "image": "/img/s1/s1_participant.jpg"
+          },
+          {
+            "id": "p12-session-1-a2",
+            "text": "",
+            "image": "/img/s1/s1_participant_2.jpg"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p12-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_participant.jpg"
+          }
+        ],
+        "session-3": [],
+        "session-4": [
+          {
+            "id": "team-magicians-session-4-a1",
+            "attribution": "Team: The Magicians",
+            "text": "Feedback & presentation.",
+            "image": "/img/s4/s4_presentations3.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p13",
+      "name": "Participant 13",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "p13-session-1-a1",
+            "text": "",
+            "image": "/img/s1/s1_table_1.jpg"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p13-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_participant_2.jpg"
+          }
+        ],
+        "session-3": [],
+        "session-4": [
+          {
+            "id": "tutor-session-4-a1",
+            "text": "Tutor",
+            "image": "/img/s4/s4_teaching.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p14",
+      "name": "Participant 14",
+      "sessions": {
+        "session-1": [],
+        "session-2": [
+          {
+            "id": "-class-session-2-a1",
+            "attribution": "Class",
+            "text": "",
+            "image": "/img/s2/s2_group.jpg"
+          }
+        ],
+        "session-3": [],
+        "session-4": [
+          {
+            "id": "p14-session-4-a1",
+            "text": "Q&A",
+            "image": "/img/s4/s4_peer_feedback_questions.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p15",
+      "name": "Participant 15",
+      "sessions": {
+        "session-1": [
+          {
+            "id": "tutor-materials-session-1-a1",
+            "attribution": "Tutor materials",
+            "text": "Neuron Network (Cajal)",
+            "image": "/img/s1/neurons.jpg"
+          },
+          {
+            "id": "class-session-1-a3",
+            "text": "Class",
+            "image": "/img/s1/s1_table_group.jpg"
+          }
+        ],
+        "session-2": [
+          {
+            "id": "p15-session-2-a1",
+            "text": "",
+            "image": "/img/s2/s2_computer.jpg"
+          }
+        ],
+        "session-3": [],
+        "session-4": [
+          {
+            "id": "p15-session-4-a1",
+            "text": "Feedback & discussion.",
+            "image": "/img/s4/s4_peer_feedback2.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}
