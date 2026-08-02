@@ -331,7 +331,7 @@
   bind:clientHeight={height}
   style={`--background-image: url(${assetUrl("img/bg_hr.jpg")});`}
 >
-  <h1>AI Literacy Challenge</h1>
+  <h1>AI Literacy Challenge: Participant journeys</h1>
   <img class="efi_logo" src={assetUrl("efi_phoenix.png")} alt="EFI logo" />
   <img
     class="grassmarket_logo"
@@ -377,7 +377,7 @@
           class="artifact-marker"
           role="button"
           tabindex="0"
-          aria-label={`${artifact.participant.name}, ${artifact.session.label}${artifact.hasText ? `: ${artifact.text}` : ""}`}
+          aria-label={`${artifact.artifact.attribution?.trim() || artifact.participant.name}, ${artifact.session.label}${artifact.hasText ? `: ${artifact.text}` : ""}`}
           transform={`translate(${artifact.x} ${artifact.y})`}
           style={`--marker-scale: ${isActive ? 1 : artifact.markerScale}; --marker-icon-y: ${-(isActive ? artifact.expandedRadius : artifact.radius) + markerIconInset}px; --content-size: ${(artifact.expandedRadius - 1) * 2}px; --content-offset: ${-artifact.expandedRadius + 1}px; --marker-font-size: ${isActive ? 11 : artifact.markerTextSize / artifact.markerScale}px;`}
           onclick={(event) => {
@@ -387,7 +387,8 @@
           onkeydown={(event) => handleMarkerKeydown(event, artifact.id)}
         >
           <title>
-            {artifact.participant.name}, {artifact.session
+            {artifact.artifact.attribution?.trim() ||
+              artifact.participant.name}, {artifact.session
               .label}{artifact.hasText ? `: ${artifact.text}` : ""}
           </title>
           <g class="marker-visual">
