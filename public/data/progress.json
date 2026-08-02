@@ -55,8 +55,93 @@
         "session-4": [
           {
             "id": "p01-session-4-a1",
-            "text": "Presented a workflow change with review steps.",
-            "image": ""
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "img/s4/s4_personalproj_SashaSabenCallaghan_class.png"
+          },
+          {
+            "id": "p01-session-4-a2",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_0_SashaCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a3",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_1_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a4",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_2_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a5",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_ableism_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a6",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_artists_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a7",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_calltoaction_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a8",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_data_nhs_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a9",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_datacentres_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a11",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_economics_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a12",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_final_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a13",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_impacts_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a15",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_labourimpacts_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a16",
+            "text": "Personal project - artist: Sasha Saben Callaghan (final remarks).",
+            "image": "/img/s4/s4_personal_project_remarks_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a17",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_risks_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a18",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_technofeudalism_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a19",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_value_SashaSabenCallaghan_copyright.png"
+          },
+          {
+            "id": "p01-session-4-a19",
+            "text": "Personal project - artist: Sasha Saben Callaghan.",
+            "image": "/img/s4/s4_personal_project_work_SashaSabenCallaghan_copyright.png"
           }
         ]
       }
@@ -330,8 +415,18 @@
         "session-3": [
           {
             "id": "p09-session-3-a1",
-            "text": "Selected the answer with clearer reasoning.",
-            "image": ""
+            "text": "Group work - Planning (The Magicicians).",
+            "image": "/img/s3/s3_canvaAI_themagicians_posterv1.png"
+          },
+          {
+            "id": "p09-session-3-a2",
+            "text": "Group work - Marketing Plan (The Magicians).",
+            "image": "/img/s3/s3_marketing_plan_magicians.png"
+          },
+          {
+            "id": "p09-session-3-a3",
+            "text": "Group work - Original materials for prompt examples (The Magicians).",
+            "image": "/img/s3/s3_original_logo_heathfc.png"
           }
         ],
         "session-4": [
@@ -364,14 +459,39 @@
         "session-3": [
           {
             "id": "p10-session-3-a1",
-            "text": "Rewrote unsupported statements as verification questions.",
-            "image": ""
+            "text": "Under water data centre.",
+            "image": "/img/s3/s3_underwater_datacentres.jpg"
+          },
+          {
+            "id": "p10-session-3-a2",
+            "text": "Class notes.",
+            "image": "/img/s3/s3_notes.jpg"
+          },
+          {
+            "id": "p10-session-3-a3",
+            "text": "Class notes",
+            "image": "/img/s3/s3_notes_4.jpg"
+          },
+          {
+            "id": "p10-session-3-a4",
+            "text": "Class notes.",
+            "image": "/img/s3/s3_notes_5.jpg"
+          },
+          {
+            "id": "p10-session-3-a5",
+            "text": "Guidance.",
+            "image": "/img/s3/s3_checklist.jpg"
+          },
+          {
+            "id": "p10-session-3-a6",
+            "text": "Dta centres (notes).",
+            "image": "/img/s3/s3_data_centres.jpg"
           }
         ],
         "session-4": [
           {
             "id": "p10-session-4-a1",
-            "text": "Completed a before-and-after workflow comparison.",
+            "text": "Group work - planning",
             "image": ""
           }
         ]
@@ -398,8 +518,14 @@
         "session-3": [
           {
             "id": "p11-session-3-a1",
-            "text": "Added verification notes before using generated text.",
-            "image": ""
+            "text": "Group work - Planning (Fiddles).",
+            "image": "/img/s3/s3_planning_fiddles.jpg",
+            "imagePosition": "center top"
+          },
+          {
+            "id": "p11-session-3-a2",
+            "text": "Group work - Planning (Fiddles) - iterative chatbot use.",
+            "image": "/img/s3/s3_fiddle_draft1_chatgpt.jpg"
           }
         ],
         "session-4": [
@@ -434,13 +560,7 @@
             "image": "/img/s2/s2_participant.jpg"
           }
         ],
-        "session-3": [
-          {
-            "id": "p12-session-3-a1",
-            "text": "Checked one answer against module notes.",
-            "image": ""
-          }
-        ],
+        "session-3": [],
         "session-4": [
           {
             "id": "p12-session-4-a1",
@@ -468,13 +588,7 @@
             "image": "/img/s2/s2_participant_2.jpg"
           }
         ],
-        "session-3": [
-          {
-            "id": "p13-session-3-a1",
-            "text": "Used peer feedback to improve evaluation criteria.",
-            "image": ""
-          }
-        ],
+        "session-3": [],
         "session-4": [
           {
             "id": "p13-session-4-a1",
@@ -488,8 +602,7 @@
       "id": "p14",
       "name": "Participant 14",
       "sessions": {
-        "session-1": [
-        ],
+        "session-1": [],
         "session-2": [
           {
             "id": "p14-session-2-a1",
@@ -497,13 +610,7 @@
             "image": "/img/s2/s2_group.jpg"
           }
         ],
-        "session-3": [
-          {
-            "id": "p14-session-3-a1",
-            "text": "Checked generated claims against class materials.",
-            "image": ""
-          }
-        ],
+        "session-3": [],
         "session-4": [
           {
             "id": "p14-session-4-a1",
@@ -536,13 +643,7 @@
             "image": "/img/s2/s2_computer.jpg"
           }
         ],
-        "session-3": [
-          {
-            "id": "p15-session-3-a1",
-            "text": "Created a verification habit for important claims.",
-            "image": ""
-          }
-        ],
+        "session-3": [],
         "session-4": [
           {
             "id": "p15-session-4-a1",

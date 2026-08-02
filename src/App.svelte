@@ -627,6 +627,7 @@
 
   .marker-content-inner.image-with-text .marker-text {
     width: 100%;
+    box-sizing: border-box;
     padding: 4px 8px 6px;
     background: rgba(16, 24, 28, 0.68);
     color: #ffffff;
@@ -646,11 +647,20 @@
   }
 
   .artifact-marker.active .marker-content-inner.image-with-text .marker-text {
-    padding: 8px 16px 10px;
-    line-height: 1.2;
-    white-space: normal;
-  }
+    width: 100%;
+    min-height: 34%;
+    box-sizing: border-box;
+    padding: 22px 48px 18px;
 
+    line-height: 1.25;
+    white-space: normal;
+    text-align: center;
+    text-overflow: clip;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
   .marker-ring {
     fill: none;
     stroke: currentColor;
