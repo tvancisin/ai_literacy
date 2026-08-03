@@ -154,6 +154,7 @@
         "session-2": [
           {
             "id": "p01-session-2-a1",
+            "attribution": "Q&A interface",
             "text": "",
             "image": "/img/s2/s2_botty.jpg"
           },
@@ -253,7 +254,7 @@
             "id": "p01-session-4-a16",
             "attribution": "Sasha",
             "text": "Personal project - artist: Sasha Saben Callaghan (final remarks).",
-            "image": "/img/s4/s4_personal_project_remarks_SashaSabenCallaghan_copyright.png"
+            "image": "/img/s4/testimgedimension.png"
           },
           {
             "id": "p01-session-4-a17",
@@ -621,6 +622,7 @@
         "session-4": [
           {
             "id": "class-session-4-a1",
+            "attribution": "Tutor",
             "text": "",
             "image": "/img/s4/s4_classfeedback.jpg"
           }
@@ -740,6 +742,7 @@
           },
           {
             "id": "class-interaction-session-4-a7",
+            "attribution": "Q&A interface",
             "text": "Q&A interface",
             "image": "/img/s4/s4_interface.jpg"
           }
@@ -786,7 +789,7 @@
       "sessions": {
         "session-1": [
           {
-            "id": "p13-session-1-a1",
+            "id": "p13-session-1-a60",
             "text": "",
             "image": "/img/s1/s1_table_1.jpg"
           }
@@ -801,7 +804,8 @@
         "session-3": [],
         "session-4": [
           {
-            "id": "tutor-session-4-a1",
+            "id": "tutor-teaching-session-4-a1",
+            "attribution": "Tutor",
             "text": "Tutor",
             "image": "/img/s4/s4_teaching.jpg"
           }
@@ -841,6 +845,12 @@
             "attribution": "Tutor materials",
             "text": "Neuron Network (Cajal)",
             "image": "/img/s1/neurons.jpg"
+          },
+          {
+            "id": "tutor-materials-session-1-a50",
+            "attribution": "Join the live poll",
+            "text": "Join the poll - menti.com (3556 7056)",
+            "image": "/img/s1/join_the_poll_public.png"
           },
           {
             "id": "class-session-1-a3",
