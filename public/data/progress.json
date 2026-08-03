@@ -63,7 +63,7 @@
         {
           "id": "survey-s1-q08",
           "text": "What do you imaging when you think about AI?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s1_q8.png"
         }
       ],
       "session-2": [
@@ -75,17 +75,17 @@
         {
           "id": "survey-s2-q02",
           "text": "Has your opinion of AI changed since you started the course? If so, how has it changed?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s2_q2.png"
         },
         {
           "id": "survey-s2-q03",
           "text": "What good things do you think AI could be used for in your local community?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s2_q3.png"
         },
         {
           "id": "survey-s2-q04",
           "text": "Are there any ways you think AI could harm your local community?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s2_q4.png"
         }
       ],
       "session-3": [
@@ -97,17 +97,17 @@
         {
           "id": "survey-s3-q02",
           "text": "Has your opinion of AI changed since you started the course? If so, how has it changed?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s3_q2.png"
         },
         {
           "id": "survey-s3-q03",
           "text": "How do you think you'll use AI in the future, if you use it at all?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s3_q3.png"
         },
         {
           "id": "survey-s3-q04",
           "text": "If you could say one thing to the people and companies who develop AI tools, what would it be?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s3_q4.png"
         }
       ],
       "session-4": [
@@ -119,22 +119,22 @@
         {
           "id": "survey-s4-q02",
           "text": "Has your opinion of AI changed since you started the course? If so, how has it changed?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s4_q2.png"
         },
         {
           "id": "survey-s4-q03",
           "text": "What has been the most surprising or interesting thing you have learned in the workshops?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s4_q3.png"
         },
         {
           "id": "survey-s4-q04",
           "text": "How could we improve these workshops in the future?",
-          "image": "/img/surveys/testimg.png"
+          "image": "/img/surveys/s4_q4.png"
         },
         {
           "id": "survey-s4-q05",
           "text": "Do you have any final thoughts you'd like to share about AI?",
-          "image": "/img/surveys/s1_q5.png"
+          "image": "/img/surveys/s4_q5.png"
         }
       ]
     }
