@@ -843,6 +843,12 @@
             "image": "/img/s1/neurons.jpg"
           },
           {
+            "id": "tutor-materials-session-1-a50",
+            "attribution": "Tutor materials",
+            "text": "Join the poll - menti.com (3556 7056)",
+            "image": "/img/s1/join_the_poll_public.png"
+          },
+          {
             "id": "class-session-1-a3",
             "text": "Class",
             "image": "/img/s1/s1_table_group.jpg"
