@@ -350,7 +350,8 @@
   bind:clientHeight={height}
   style={`--background-image: url(${assetUrl("img/bg_hr.jpg")});`}
 >
-  <h1>AI Literacy Challenge: Participant journeys</h1>
+  <h1>AI Literacy Challenge: <br>
+  Participant journeys</h1>
   <img class="efi_logo" src={assetUrl("efi_phoenix.png")} alt="EFI logo" />
   <img
     class="grassmarket_logo"
